@@ -3,6 +3,9 @@ title: "7 Steps to machine Learning"
 published: false
 ---
 
+# Preface
+Hello guys, Around 1 year ago, I have been to a talk by YuFeng Guo in Singapore. I have documented his talk in another blog post of different domain but I wish to revise my thoughts after 1 year of digestion.
+
 ## Easy 7 steps
 I have found great succes over the course of applying the following 7 steps, so here they are:
 1. Gathering Data 
