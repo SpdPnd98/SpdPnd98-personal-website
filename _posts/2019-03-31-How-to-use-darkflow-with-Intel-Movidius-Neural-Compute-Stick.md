@@ -3,27 +3,27 @@ title: "How to use darkflow with Intel Movidius Neural Compute Stick"
 published: true
 ---
 
-**Note:** The following tutorial explains how to use ```darkflow``` framework, which is a tensorflow implementation, and integrate it with ```Intel Movidius Neural Compute Stick```. This tutorial has been tested on Ubuntu 16.04LTS, CUDA9.0 and CUDNN8.0, and assumes you already have them installed.
+**Note:** The following tutorial explains how to use ```darkflow``` framework, which is a tensorflow implementation, and integrate it with ```Intel Movidius Neural Compute Stick```. This tutorial has been tested on ```Ubuntu 16.04LTS```, ```CUDA9.0``` and ```CUDNN8.0```, and assumes you already have them installed.
 
 # Preface
-It has come to my attention that the Intel Movidius Neural Compute Stick is rarely spoken of. This could be due to the lack of large community at the moment, or maybe darkflow is not a widely used framework. In the official documentation of Intel Movidius Neural Compute Stick, the 2 most used frameworks are caffe and tensorflow. 
+It has come to my attention that edge image classification is highly under-discussed. This could be due to the lack of large community at the moment, or maybe frameworks are not optimized for edge computing. In the official documentation of ```NCSDK API```, the 2 most used frameworks are caffe and tensorflow, which inspired me to use my knowledge on darknet to check out the tensorflow implementation of ```darknet```, ```darkflow```. However, ```Intel Movidius Neural Compute Stick``` is rarely used together with the said framework. Hence I begin my journey on crawling the web and all documentations I can find to get ```darkflow``` to work on ```Intel Movidius Neural Compute Stick```.
 
-Although caffe is a very powerful framework, and tensorflow provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with darknet, a C/C++ implemented framework for yolov2 model, hence I was curious to see what darkflow, the tensorflow implementation of darknet, has in store.
+Although ```caffe``` is a very powerful framework, and ```tensorflow``` provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with darknet, a ```C/C++``` implemented framework for yolov2 model, hence I was curious to see what ```darkflow```, the ```tensorflow``` implementation of ```darknet```, has in store.
 
-However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at modelconverge.xyz, I would like to show you my results and training procedure.
+However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at [modelconverge.xyz], I would like to show you my research results and steps required for proper training.
 
-I have listened Mr. YuFeng Guo's presentation on 7 steps to machine learning and but I shall show it in a seperate blog post.
+Note this blogpost is not for beginners. Check out my blog for 7 steps to Machine Learning in a seperate blogpost for the basic idea of the steps I follow.
 
-The aim of this tutorial is just to setup darkflow, setup NCSDK2 and compile a graph file that is intepretable by the Intel Movidius Neural Compute Stick, and read the output. 
+The aim of this tutorial is just to setup darkflow, setup ```NCSDK2``` and compile a graph file that is intepretable by the ```Intel Movidius Neural Compute Stick```, and read the output, ending off with an exmaple. 
 
 # Setup 
-Clone the darkflow repository:
+Clone the ```darkflow``` repository:
 
 ```git clone https://github.com/thtrieu/darkflow```
 
 Please see the official docs for training steps, but for TLDR:
 - get training data
-- use a labeling image tool to label your images in xml format
+- use a labeling image tool to label your images in xml format, link (here)[https://github.com/tzutalin/labelImg]
 - generate your labels in .txt file
 - edit cfg file (eg, filter and classes in yolov2 model)
 - pass in the above to darkflow with the following command
@@ -77,15 +77,17 @@ mv  darkflow/built_graph/
 mvNCCompile built_graph/tiny-yolo-voc.pb -s 12 -in input -on output -o built_graph/tiny-yolo-voc.graph 
 ```
 
-Now, run this to see the result, with movidius plugged in of course
+Now, run this to see the result, with your ```Intel Movidius Neural Compute Stick``` plugged in:
 
 ```
 python3 test_movidius.py -i video.avi
 ```
-Congrats, you have succesfully run a TinyYOLO model on movidius stick! expect similar results when exporting them to the edge!
+Congrats, you have succesfully run a TinyYOLO model on movidius stick! Expect similar results when exporting them to the edge!
 
 # Edge example
 
 Grab a coffee and something to do because the procedures are largely the same, but taking a lot longer in an environment like raspberry pi or other device. Do note to use ```make api``` instead of ```make``` when building ncsdk2.
 
 This time, you do not need to train a model, but just import a model like the example above. 
+
+Hope this blog has been of help. Drop me an email if you have any questions. Thanks.
