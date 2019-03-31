@@ -65,7 +65,7 @@ There are a lot of tools for people to choose from, my favorites being `Tensorbo
 ### Step 6: Hyperparameter Tuning
 In Image recognition sense, hyperparameters have a wide range, from augmentation of image to decay rate and learning rate. Upon evaluating the model, you can tune the hyperparameters to improve the performance of your final model, making it converge faster and/or become more accurate. The possibilities are endless, but not for the faint of heart. For beginners, stick to the basic trainings, and tune only if you need to, going back all the way to Step 1 at times just to ge the best model possible.
 
-###Step 7: Prediction
+### Step 7: Prediction
 Finally we have reached the last step, which is evaluating the model with data the model has not seen before. This moment in my opinion is the most exciting, as we can see how our model performs outside of a controlled environment, and detect any loopholes the model may have, including more edge cases and retrain the model. Thought it may not be entirely neccessary, this is truly where the fun begins, stress testing your model to its limit.
 
 # Conclusion
