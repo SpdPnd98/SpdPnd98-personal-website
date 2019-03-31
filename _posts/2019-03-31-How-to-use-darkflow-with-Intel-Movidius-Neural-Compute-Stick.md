@@ -3,7 +3,7 @@ title: "How to use darkflow with Intel Movidius Neural Compute Stick"
 published: true
 ---
 
-**Note:** The following tutorial explains how to use ```darkflow``` framework, which is a tensorflow implementation, and integrate it with ```Intel Movidius Neural Compute Stick```. This tutorial has been tested on ```Ubuntu 16.04LTS```, ```CUDA9.0``` and ```CUDNN8.0```, and assumes you already have them installed.
+**Note:** The following tutorial explains how to use `darkflow` framework, which is a tensorflow implementation, and integrate it with ```Intel Movidius Neural Compute Stick```. This tutorial has been tested on ```Ubuntu 16.04LTS```, ```CUDA9.0``` and ```CUDNN8.0```, and assumes you already have them installed.
 
 # Preface
 It has come to my attention that edge image classification is highly under-discussed. This could be due to the lack of large community at the moment, or maybe frameworks are not optimized for edge computing. In the official documentation of ```NCSDK API```, the 2 most used frameworks are ```caffe``` and ```tensorflow```, which inspired me to use my knowledge on ```tensorflow``` to check out ```darkflow```. However, ```Intel Movidius Neural Compute Stick``` is rarely used together with the said framework. Hence I began on my journey scouring the web and all documentations I can find to get ```darkflow``` to work on the ```Intel Movidius Neural Compute Stick```.

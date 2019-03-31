@@ -21,7 +21,7 @@ I have found great succes over the course of applying the following 7 steps, so 
 ### Step 1. Gather Data
 Gathering data is easy right? Well, maybe. Sometimes, you just have the data you need before you even think of solving the problem, but for AI/ML enthusiasts like us, data is like the new oil, if you get it, sprinkle a little bit of AI, ~ BAM ~, a fresh hot recipe for a startup is brewed. I recommend using a batch downloader and gather your initial training data from the public domain, just to get a proof of concept. Another (even better) way is to check if the problem you have at hand has ever been somewhat involved in an online competiton like Kaggle's competitions etc.
 
-Depending on your framework, you may need to save your data in different formats. For darkflow, you don't need any special way of naming/formating of the image, as we'll be using a simple labeling image tool.
+Depending on your framework, you may need to save your data in different formats. 
 
 Of course, to make things easier, a format as such will suffice (minimal):
 
@@ -31,14 +31,15 @@ Data
 | Annotations
 ```
 Store all your data in the Images directory
-We'll annotate the images and save the .xml files in Annotations
 
 ### Step 2: Preparing Data
 This step mainly focuses on filtering your data and labeling your data. Take a look at all your data, are there duplicates? Are there images that are irrelevant? Are there images with weird file extensions (.gif, .ico, etc.)? Delete them if need be, make sure your data is as clean as possible.
 
 Congratulations! You've passed a big hurdle for training AI models at this point!
 
-Now, we need to label our precious, clean data. Clone this repository: (labelImg GUI)[https://github.com/tzutalin/labelImg]
+Now, we need to label our precious, clean data. Again, depending on your choice of classification, this may or may not be required.
+
+Clone this repository: (labelImg GUI)[https://github.com/tzutalin/labelImg]
 
 ``` git clone https://github.com/tzutalin/labelImg ```
 
