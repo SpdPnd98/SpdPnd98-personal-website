@@ -10,7 +10,7 @@ It has come to my attention that edge image classification is highly under-discu
 
 Although ```caffe``` is a very powerful framework, and ```tensorflow``` provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with ```darknet```, a ```C/C++``` implemented framework for yolov2 model, hence I was curious to see what ```darkflow```, the ```tensorflow``` implementation of ```darknet```, has in store.
 
-However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at [modelconverge.xyz](https://www.modelconverge.xyz), I would like to show you my research results and steps required for proper training.
+However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at [modelconverge.xyz], I would like to show you my research results and steps required for proper training.
 
 Note this blogpost is not for beginners. Check out my blog for 7 steps to Machine Learning in a seperate blogpost for the basic idea of the steps I follow.
 
@@ -34,17 +34,17 @@ After your training, you should see .meta files and .pb files in ckpt directory 
 Generate the frozen pb file with the following command:
 ```./flow --model /path/to/cfg --load (your tensorflow weights) --savepb /path/to/output```
 
-Next, clone the following 2 repositories: yolo-darkflow-movidius & NCSDK2
+Next, clone the following 2 repositories: yolo-darkflow-movidius & NCSDK2.
 
 ```
 git clone https://github.com/SpdPnd98/yolo-darkflow-movidius.git
 git clone t clone -b ncsdk2 http://github.com/Movidius/ncsdk && cd ncsdk && make install
 ```
-use ```-b ncsdk2``` to clone NCSDK2, you can clone NCSDK, but will need to make modifications according to this [website](https://movidius.github.io/ncsdk/ncapi/python_api_migration.html)
+use ```-b ncsdk2``` to clone NCSDK2, you can clone NCSDK, but will need to make modifications according to this [website](https://movidius.github.io/ncsdk/ncapi/python_api_migration.html).
 
 if you have caffe installed, comment out the path to your caffe directory, as ncsdk examples depend on and comes with a caffe installation. ncsdk2 also uninstalls any installation of OpenCV. If you however wish to ignore their examples, feel free to use ```make api``` instead of ```make```, as we will show below.
 
-Editing the cfg file follows the same format for darknet, please read the documentation [here](https://pjreddie.com/darknet/yolo/)
+Editing the cfg file follows the same format for darknet, please read the documentation [here](https://pjreddie.com/darknet/yolo/).
 
 # Preparing for Intel Movidius Stick
 The command to convert the graph file output to a graph file that complies to Intel Movidius Stick is the command below:
@@ -53,7 +53,7 @@ please refer here for more arguments(https://movidius.github.io/ncsdk/tools/comp
 
 the -s argument indicates the amount of SHAVES used. SHAVES is analogous to core counts, max is 12 SHAVES. Read [here](https://movidius.github.io/ncsdk/ncs.html) for more details.
 
-Next, we need to create a symbolic link in ```yolo-darkflow-movidius``` directory
+Next, we need to create a symbolic link in ```yolo-darkflow-movidius``` directory:
 ```
 cd yolo-darkflow-movidius/
 pip install --upgrade cython
