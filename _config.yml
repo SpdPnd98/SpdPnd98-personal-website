@@ -60,9 +60,9 @@ topics:
     web_url: https://aws.amazon.com/free/?sc_channel=PS&sc_campaign=acquisition_SG&sc_publisher=google&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCore%7CCore%7CSG%7CEN%7CText&sc_content=Brand_Core_HV_e&sc_detail=aws&sc_category=Core&sc_segment=293639831497&sc_matchtype=e&sc_country=SG&s_kwcid=AL!4422!3!293639831497!e!!g!!aws&ef_id=CjwKCAjwp_zkBRBBEiwAndwD9dXvEXYS30C-UDcbSv8VD1a2loe76eIkcltkKJw9api5slL3EAd-rhoCLosQAvD_BwE:G:s
     image_url: https://www.epsilontel.com/wp-content/uploads/2018/06/aws-logo-new.gif
   
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+  #- name: CSS
+  #  web_url: https://github.com/topics/css
+  #  image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
 
   - name: Arduino
     web_url: https://github.com/arduino/Arduino
