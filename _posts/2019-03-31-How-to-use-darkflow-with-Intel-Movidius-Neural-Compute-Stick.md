@@ -55,7 +55,7 @@ if you have caffe installed, comment out the path to your caffe directory, as nc
 
 Editing the cfg file follows the same format for darknet, please read the documentation [here](https://pjreddie.com/darknet/yolo/).
 
-# Preparing for Intel Movidius Stick
+# Preparing for Intel Movidius Neural Compute Stick
 The command to convert the graph file output to a graph file that complies to Intel Movidius Stick is the command below:
 `mvNCCompile -s 12 /path/to/graph.pb`
 please refer here for more arguments(https://movidius.github.io/ncsdk/tools/compile.html)
