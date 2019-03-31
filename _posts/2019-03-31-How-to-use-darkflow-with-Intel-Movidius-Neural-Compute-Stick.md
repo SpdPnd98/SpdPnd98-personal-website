@@ -58,7 +58,7 @@ Editing the cfg file follows the same format for darknet, please read the docume
 # Preparing for Intel Movidius Neural Compute Stick
 The command to convert the graph file output to a graph file that complies to Intel Movidius Stick is the command below:
 `mvNCCompile -s 12 /path/to/graph.pb`
-please refer here for more arguments(https://movidius.github.io/ncsdk/tools/compile.html)
+please refer [here](https://movidius.github.io/ncsdk/tools/compile.html) for more arguments.
 
 the -s argument indicates the amount of SHAVES used. SHAVES is analogous to core counts, max is 12 SHAVES. Read [here](https://movidius.github.io/ncsdk/ncs.html) for more details.
 
