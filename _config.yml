@@ -66,7 +66,7 @@ topics:
 
   - name: Arduino
     web_url: https://github.com/arduino/Arduino
-    image_url: ../images/arduino.png
-    
+    # image_url: ../images/arduino.png
+
 
 theme: jekyll-theme-cayman
