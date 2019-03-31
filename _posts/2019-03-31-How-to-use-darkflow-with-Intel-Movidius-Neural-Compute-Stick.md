@@ -10,7 +10,7 @@ It has come to my attention that edge image classification is highly under-discu
 
 Although ```caffe``` is a very powerful framework, and ```tensorflow``` provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with ```darknet```, a ```C/C++``` implemented framework for yolov2 model, hence I was curious to see what ```darkflow```, the ```tensorflow``` implementation of ```darknet```, has in store.
 
-However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at <href src = "modelconverge.xyz"/>, I would like to show you my research results and steps required for proper training.
+However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at <a href src = "modelconverge.xyz">modelconverge.xyz</a>, I would like to show you my research results and steps required for proper training.
 
 Note this blogpost is not for beginners. Check out my blog for 7 steps to Machine Learning in a seperate blogpost for the basic idea of the steps I follow.
 
