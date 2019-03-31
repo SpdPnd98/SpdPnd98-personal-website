@@ -8,11 +8,11 @@ published: true
 # Preface
 It has come to my attention that edge image classification is highly under-discussed. This could be due to the lack of large community at the moment, or maybe frameworks are not optimized for edge computing. In the official documentation of `NCSDK API`, the 2 most used frameworks are `caffe` and `tensorflow`, which inspired me to use my knowledge on `tensorflow` to check out `darkflow`. However, `Intel Movidius Neural Compute Stick` is rarely used together with the said framework. Hence I began on my journey scouring the web and all documentations I can find to get `darkflow` to work on the `Intel Movidius Neural Compute Stick`.
 
-Although `caffe` is a very powerful framework, and `tensorflow` provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with `darknet`, a `C/C++` implemented framework for yolov2 model, hence I was curious to see what `darkflow`, the `tensorflow` implementation of `darknet`, has in store.
+Although `caffe` is a very powerful framework, and `tensorflow` provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with `darknet`, a `C/C++` implemented framework for yolov2 model, hence I was curious to see what `darkflow`, the `tensorflow` implementation of `darknet`, has in store. FUrthermore, I have found that `caffe`'s method of labeling and improving training speed to be confusing, `darkflow` however is faster to market as labeling is simpler, training is straightforward, and produces good results.
 
-However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at [modelconverege.xyz](https://www.modelconverge.xyz), I would like to show you my research results and steps required for proper training.
+With that being said, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at [modelconverege.xyz](https://www.modelconverge.xyz), I would like to show you my research results and steps required for proper training.
 
-Note this blogpost is not for beginners. Check out my blog for 7 steps to Machine Learning in a seperate blogpost for the basic idea of the steps I follow.
+Note this blogpost is not for beginners. Check out my blog for [7 steps to Image Classification with AI](2019-03-31-7-steps-to-Image-Classification-with-AI.md) for the basic idea of the steps I follow.
 
 The aim of this tutorial is just to setup darkflow, setup `NCSDK2` and compile a graph file that is intepretable by the `Intel Movidius Neural Compute Stick`, and read the output, ending off with an exmaple. 
 
