@@ -1,10 +1,12 @@
 ---
-title: "7 Steps to machine Learning"
+title: "7 Steps to Image Classification with AI"
 published: false
 ---
 
 # Preface
 Hello guys, Around 1 year ago, I have been to a talk by YuFeng Guo in Singapore. I have documented his talk in another blog post of different domain but I wish to revise my thoughts after 1 year of digestion.
+
+Not only that, I have used the same framework in AI, here is my 7 steps to Image Classification with AI.
 
 ## Easy 7 steps
 I have found great succes over the course of applying the following 7 steps, so here they are:

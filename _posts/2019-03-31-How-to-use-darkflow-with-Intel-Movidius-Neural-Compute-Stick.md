@@ -10,7 +10,7 @@ It has come to my attention that edge image classification is highly under-discu
 
 Although ```caffe``` is a very powerful framework, and ```tensorflow``` provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with ```darknet```, a ```C/C++``` implemented framework for yolov2 model, hence I was curious to see what ```darkflow```, the ```tensorflow``` implementation of ```darknet```, has in store.
 
-However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at [modelconverge.xyz], I would like to show you my research results and steps required for proper training.
+However, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at (modelconverge.xyz), I would like to show you my research results and steps required for proper training.
 
 Note this blogpost is not for beginners. Check out my blog for 7 steps to Machine Learning in a seperate blogpost for the basic idea of the steps I follow.
 
@@ -26,8 +26,11 @@ Please see the official docs for training steps, but for TLDR:
 - use a labeling image tool to label your images in xml format, link [here](https://github.com/tzutalin/labelImg)
 - generate your labels in .txt file
 - edit cfg file (eg, filter and classes in yolov2 model)
-- pass in the above to darkflow with the following command
-```./flow --labels labels.txt --model model.cfg --dataset /path/to/dataset --annotations /path/to/xml/annotations --train --trainer your_preference --batch size (Enter your number) --gpu (0.0(min) - 1.0(max)) --load(optional) -1(latest)OR(a recorded weight index)```
+- pass the above to darkflow with the following command
+```
+VALUE = 0.0 to 1.0 (amount of GPU used)
+./flow --labels labels.txt --model model.cfg --dataset /path/to/dataset --annotations /path/to/xml/annotations --train --trainer YOUR_PREFERENCE --batch size BATCH_SIZE --gpu VALUE --load YOUR_CHECKPOINT
+```
 
 After your training, you should see .meta files and .pb files in ckpt directory of darkflow. These are graph files compatible with Tensorflow, but not with NCSDK2. 
 
@@ -90,4 +93,4 @@ Grab a coffee and something to do because the procedures are largely the same, b
 
 This time, you do not need to train a model, but just import a model like the example above. 
 
-Hope this blog has been of help. Drop me an email if you have any questions. Thanks.
+Hope this blog post has been of help. Drop me an email if you have any questions. Thanks.
