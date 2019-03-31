@@ -39,20 +39,9 @@ Congratulations! You've passed a big hurdle for training AI models at this point
 
 Now, we need to label our precious, clean data. Again, depending on your choice of classification, this may or may not be required.
 
-Clone this repository: (labelImg GUI)[https://github.com/tzutalin/labelImg]
+This step includes drawing a boundary box over your image data (assuming that's what you have) and generate an XML file with your image's classes. 
 
-``` git clone https://github.com/tzutalin/labelImg ```
-
-Next:
-
-```
-cd labelImg
-python3 labelImg.py
-```
-
-this step includes drawing a boundary box over your image data (assuming that's what you have). Change the saving Annotations file to path/to/data/Data/Annotations. After 1 annotation, check that there is indeed an xml file at the designated annotation folder.
-
-also, create a labels.txt that has all your classes in different lines.
+Also, create a labels.txt that has all your classes in different lines.
 
 Another topic we discuss here would be a train-test split. A lot of people will tell you different train-test split ratios, but generally a 9:1 to a 10:1 is a good split.
 
