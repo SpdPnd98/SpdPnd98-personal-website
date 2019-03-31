@@ -1,6 +1,6 @@
 ---
 title: "7 Steps to Image Classification with AI"
-published: false
+published: true
 ---
 
 # Preface
@@ -54,17 +54,31 @@ this step includes drawing a boundary box over your image data (assuming that's 
 
 also, create a labels.txt that has all your classes in different lines.
 
+Another topic we discuss here would be a train-test split. A lot of people will tell you different train-test split ratios, but generally a 9:1 to a 10:1 is a good split.
+
 After this step, congrats! Because you have completed all the boring checklist!
 
 ### Step 3: Choosing a model
-Now, at this step, you may be tempted to just choose one of the many algorithms and see the result. I have tested some of the algorithms and indeed, sometimes due to data incompleteness, characteristics of data etc, the benchmarks documented may be slightly off compared to what you experience, but for scientific reasons I believe looking at the various models darkfow support is beneficial. Nonetheless, I chose Tiny YOLO V2 as my model due to its speed while being relatively accurate.
+Now, at this step, you may be tempted to just choose one of the many algorithms and see the result. I have tested some of the algorithms and indeed, sometimes due to data incompleteness, characteristics of data etc, the benchmarks documented may be slightly off compared to what you experience, but for scientific reasons I believe looking at the various models is beneficial.
 
-Some things to note when choosing this model:
-- change the classes to the amount of classes you are training
-- change the filter according to (N+5) * 5, N being amount of classes
-- changing batch size doesn't affect actual training using darkflow, but does on darknet
-
-More details on TinyYOLO algorithm and how it compares to other algs here: [https://pjreddie.com/darknet/yolo/]
+More details on algorithms and how it compares to other algs here: [darknet supported algoritms](https://pjreddie.com/darknet/yolo/) and [Other good algorithms](https://medium.com/zylapp/review-of-deep-learning-algorithms-for-image-classification-5fdbca4a05e2)
 
 ### Step 4: Training
-Finally, pass in your dataset, labels, annotations, cfg file into darkflow. You can edit the batch size to any number your GPU can handle. I left mine at default. Specify the input layer as "input" and output layer as "output".
+Finally, pass in your training dataset, labels, annotations, model files into your model/framework. The methods of training differes from framework to framework, but generally this step is considered the easiest.
+
+The AI algorithm will generate layers that contain important features of a class. After this phase the model will be able to recognize objects in images!
+
+### Step 5: Evaluation
+Evaluation basically means to see how accurate your weights are by benchmarking your model to the test dataset. Your model (ideally) should not overfit nor underfit. Good accuraccies around 95-98% IMO, but may vary according to algorithms, features, and datasets. 
+
+There are a lot of tools for people to choose from, my favorites being `Tensorboard` and `mAP`. Theories are explained in a seperate blog post.
+
+### Step 6: Hyperparameter Tuning
+In Image recognition sense, hyperparameters have a wide range, from augmentation of image to decay rate and learning rate. Upon evaluating the model, you can tune the hyperparameters to improve the performance of your final model, making it converge faster and/or become more accurate. The possibilities are endless, but not for the faint of heart. For beginners, stick to the basic trainings, and tune only if you need to, going back all the way to Step 1 at times just to ge the best model possible.
+
+###Step 7: Prediction
+Finally we have reached the last step, which is evaluating the model with data the model has not seen before. This moment in my opinion is the most exciting, as we can see how our model performs outside of a controlled environment, and detect any loopholes the model may have, including more edge cases and retrain the model. Thought it may not be entirely neccessary, this is truly where the fun begins, stress testing your model to its limit.
+
+# Conclusion
+
+These are the 7 steps that I usually follow when training my own image classifier, and has brought me success in evaluating my model's success/failure. Drop me an email if you have any question and I hope this blog post has been of value to you. Thanks
