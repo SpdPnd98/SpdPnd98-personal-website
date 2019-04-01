@@ -12,7 +12,7 @@ Although `caffe` is a very powerful framework, and `tensorflow` provides a lot o
 
 With that being said, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at [modelconverege.xyz](https://www.modelconverge.xyz), I would like to show you my research results and steps required for proper training.
 
-Note this blogpost is not for beginners. Check out my blog for [7 steps to Image Classification with AI](https://www.modelconverge.xyz/2019/03/31/7-steps-to-Image-Classification-with-AI.md) for the basic idea of the steps I follow.
+Note this blogpost is not for beginners. Check out my blog for [7 steps to Image Classification with AI](https://modelconverge.xyz/2019/03/31/7-steps-to-Image-Classification-with-AI/) for the basic idea of the steps I follow.
 
 The aim of this tutorial is just to setup darkflow, setup `NCSDK2` and compile a graph file that is intepretable by the `Intel Movidius Neural Compute Stick`, and read the output, ending off with an exmaple. 
 
