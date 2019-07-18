@@ -1,5 +1,5 @@
 ---
-title: "Code Extreme Apps 2019: My Experience in Leading"
+title: "Code Extreme Apps 2019: My Leadership Experience"
 published: True
 ---
 # Preface
