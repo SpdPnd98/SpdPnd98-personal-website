@@ -43,22 +43,22 @@ topics:
   
   - name: Tensorflow
     web_url: https://github.com/tensorflow
-    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/173px-Tensorflow_logo.svg.png 
+    image_url: ../images/Tensorflow_logo.png 
   
   - name: Caffe
     web_url: https://github.com/BVLC/caffe
-    image_url: https://ia801603.us.archive.org/29/items/github.com-caffe2-caffe2_-_2017-05-18_23-18-46/cover.jpg
+    image_url: ../images/caffe2.png
 
   - name: Python
     web_url: https://github.com/python
-    image_url: http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/python-icon.png
+    image_url: ../images/python.png
   
   - name: R
-    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/330px-R_logo.svg.png
+    image_url: ../images/R.png
   
   - name: AWS
     web_url: https://aws.amazon.com/free/?sc_channel=PS&sc_campaign=acquisition_SG&sc_publisher=google&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCore%7CCore%7CSG%7CEN%7CText&sc_content=Brand_Core_HV_e&sc_detail=aws&sc_category=Core&sc_segment=293639831497&sc_matchtype=e&sc_country=SG&s_kwcid=AL!4422!3!293639831497!e!!g!!aws&ef_id=CjwKCAjwp_zkBRBBEiwAndwD9dXvEXYS30C-UDcbSv8VD1a2loe76eIkcltkKJw9api5slL3EAd-rhoCLosQAvD_BwE:G:s
-    image_url: https://www.epsilontel.com/wp-content/uploads/2018/06/aws-logo-new.gif
+    image_url: ../images/aws.gif
   
   #- name: CSS
   #  web_url: https://github.com/topics/css
@@ -67,6 +67,10 @@ topics:
   - name: Arduino
     web_url: https://github.com/arduino/Arduino
     image_url: ../images/arduino.png
+
+  - name: node.JS
+    web_url: https://github.com/nodejs
+    image_url: ../images/nodeJS.png
 
 
 theme: jekyll-theme-cayman
