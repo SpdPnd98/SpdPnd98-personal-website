@@ -1,6 +1,6 @@
 ---
-title: "7 Steps to Image Classification with AI"
-published: false
+title: "Code Extreme Apps 2019: My Experience in Leading"
+published: True
 ---
 # Preface
 
@@ -93,4 +93,6 @@ All in all, I feel like there is still a lot of room for improvement in my leade
 
 Code Extreme Apps 2019 was a really fun experience. Rumor has it that it shall be shut down forever, never to see the light of day ever again. Will it be revamp? Who knows. Nevertheless, congratulations to all the finalists and winners and keep fighting, and all the best for those who participated and put in as much, if not more effort, than our team!
 
-That's it for today, thanks for taking your time to read this extremely long article. 
+However, in the future, I hope to work in a team where I like to call a "Self directed team", a team that understands what the product is and is willing to take up roles automatically and solve problems on their own. In a sense, everyone is a leader in their own domain, where little to no inteference between parties is involved, and everyone is clear what is required to complete the project, automatically complementing each others' strengths and weaknesses.
+
+That's it for today, thanks for taking your time to read this extremely long article. If You read until here you are amazing. Do snoop around my articles and repositories for other fun stuff!
