@@ -1,5 +1,5 @@
 ---
-title: "My journey to finding the best developer's setup"
+title: "My journey to the best developer's setup"
 published: true
 ---
 
@@ -48,7 +48,7 @@ As of now, I'm listing my acer one 10 on Carousell. It's still looking for a hom
 
 I next stumbled upon a 14-inch Fujitsu Lifebook S series. It has a pretty capable system with a 3rd gen i7 processor, 8Gb RAM (4GB soldered and 4 GB additional), and a full sized keyboard, my only gripe was the terribly bad TN panel it came with. I'm pretty sure if anyone got that, they would be very happy to use it as their daily drive (if it didn't look soo beat up). That being said, i was still satisfied with it's performance as I wiped the disk and installed ubuntu on it. I would really use it if forced to do so.
 
-<img src="../images/sh782.jpg"/>
+<img src="/images/sh782.jpg"/>
 *note: I got a black one*
 
 The scary part came when I was in school one day using it. I laid my hand on the left palm rest, and lo and behold, it rebooted. This led me to believe that this laptop was given up primarily for this reason. It soon became very consistent and really annoyed me. Not only that, i actually felt a small shock at the palm rest resembling static, making me very paranoid of using it ever since. 
@@ -93,7 +93,7 @@ After all my research, I concluded I would get a Thinkpad that was 200SGD or les
 
 If I were in the US, I believe I'd jumped onto Craigslist or ebay, then find the best deal, meet up with the seller and buy the item after physically inspecting it. Since I was in Singapore, the only platform that was similar was Carousell. I decided to look there and after a few months of snooping around most thinkpad listings (think I went through at least 600+ listings), I found a used thinkpad x220 series with negotiable price. 
 
-I offered 100SGD to buy his Thinkpad X220 with 4GB, 320 GB HDD an 2nd Gen i5 processor. We met up and te deal went very smoothly. I refered to codingIndex's blog to ensure Intel AT was disabled (not permanantly as it could increase resale value one day) and more importantly, Computrace. Upon checking, I was plesantly surprised that on my unit, Computrace can be manually disabled. other than some annoying stickers, a small chip at the left palm rest, a faulty left click that came with the keyboard, and an iconic Indian scent (no offense sorry!), I was pretty satisfied with the device!
+I offered 100SGD to buy his Thinkpad X220 with 4GB, 320 GB HDD an 2nd Gen i5 processor. We met up and the deal went very smoothly. I refered to codingIndex's blog to ensure Intel AT was disabled (not permanantly as it could increase resale value one day) and more importantly, Computrace. Upon checking, I was plesantly surprised that on my unit, Computrace can be manually disabled. other than some annoying stickers, a small chip at the left palm rest, a faulty left click that came with the keyboard, and an iconic Indian scent (no offense sorry!), I was pretty satisfied with the device!
 
 My next step was to remove the sticker on the device, clean the device physically, then upgrade the device with more RAM and an SSD.
 
@@ -101,11 +101,11 @@ My next step was to remove the sticker on the device, clean the device physicall
 
 Stupidly enough, i did not take a picture of the before and after cleaning the laptop. However, here's how it looked like on the listeing:
 
-<img src="../images/before-cleaning.jpg"/>
+<img src="/images/before-cleaning.jpg"/>
 
 I bought some general LCD panel cleaning tools to clean everything except the electronics. I also bought a compressed air blower to clean the fans.
 
-I managed to remove the stickers, but not so much the residuals. Sad but I think I did the best I could. I cleaned the fans, now they're very clean! I also gave the screen and other aspects of the laptop a good clean and I was very pleased with the result!
+I managed to remove the stickers, but not so much the residuals. Sad but I think I did the best I could. I gave the fan a good blow with compressed air, now they're very clean! I also gave the screen and other aspects of the laptop a good clean and I was very pleased with the result!
 
 I purposely omited the whole process of scrubbing and scuffing at how bad the sticker was than what I anticipated but hey, that's what you get for paying for 100SGD. The whole device was now very vert inviting to use!
 
@@ -139,6 +139,8 @@ It is not uncommon for people to market their laptop as old and want to dispose 
 After a long wait, I tested the screen with the controller, and to my surprise it worked out of the box. Rejoice!
 
 # 1 + 1 is not always just 2
+
+<img src="/images/thinkpad-with-screen.svg"/>
 
 With my simple and cheapo combo, I have a dual monitor, awesome keyboard and fast boot time setup. This is really all I need to be truly productive as anything power hungry can be done in the cloud if so needed. This setup helped me finish this blog way faster than I could with my TV screen and Nitro V due to the similar screen size, inviting keyboard, and less multitasking required. Task that I used to need to split screen can be done in 2 screens which is the best feeling ever! I am still evaluating the setup to see whether this setup really is just a laptop and a screen or will it bring more benefits that maybe I have yet to discover. Regardless, here is the price breakdown:
 
