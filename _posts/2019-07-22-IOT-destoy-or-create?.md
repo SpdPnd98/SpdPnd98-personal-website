@@ -1,6 +1,6 @@
 ---
 title: IoT; do we destroy or create?
-publish: false
+publish: False
 ---
 
 # Preface
