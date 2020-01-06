@@ -138,3 +138,19 @@ ul.list-style-none {
     padding-left: 16px;
   }
 }
+
+//tables
+table {
+	margin: 5px auto;
+	padding: 2px;
+	border: 2px solid lightgrey;
+	width: 100%;
+}
+
+th,td {
+	border: 2px solid grey;
+}
+
+tr:nth-child(even) {
+	background-color: lightgrey;
+}
