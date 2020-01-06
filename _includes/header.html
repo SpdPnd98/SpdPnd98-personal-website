@@ -10,7 +10,7 @@
 
 {% assign content = page.content %}
 
-{% assign user = site.github.owner %}
+<!-- {% assign user = site.github.owner %} -->
 
 {% if page.path contains '_posts' %}
   {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
