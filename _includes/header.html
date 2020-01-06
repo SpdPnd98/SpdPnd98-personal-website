@@ -12,6 +12,9 @@
 
 <!-- {% assign user = site.github.owner %} -->
 
+{% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+
+
 <!-- {% if page.path contains '_posts' %}
   {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% else %}
