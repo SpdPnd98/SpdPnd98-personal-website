@@ -11,11 +11,14 @@ body {
 
 // White background
 div.bg-gray-light {
-  background: #ffffff !important;
+  background:   #ffffff !important;
 }
 
-body.bg-cream {
-  background: #CFEBDF;
+div.bg-contrast-blue {
+  background: #cfebdf !important;
+}
+body.bg-blue {
+  background: #9bc4cb !important;
 }
 
 img {
@@ -157,4 +160,9 @@ th,td {
 
 tr:nth-child(even) {
 	background-color: lightgrey;
+}
+
+// try to make full height
+.height-full-vh{
+  min-height: 100vh;
 }

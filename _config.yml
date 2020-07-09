@@ -43,7 +43,7 @@ social_media:
 pagination:
   enabled: true
   collection: 'posts'
-  per_page: 6
+  per_page: 9
   permalink: '/page/:num/'
   sort_field: 'date'
   sort_reverse: true
