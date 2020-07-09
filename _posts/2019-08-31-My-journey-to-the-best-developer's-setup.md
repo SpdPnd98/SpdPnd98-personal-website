@@ -19,7 +19,7 @@ Well, I'd agree with that to some degree. But as someone who looks at a computer
 
 Not saying my previous system is not capable, but my only big gripe with it is that I needed to bring a power brick that is literal with it's name, a brick, not to mention the somewhat heavy weight of the laptop and it's short battery life. I also dropped my Nitro V before and immediately it had a small bent. The annoying elevation on the left, although went away after I sent for repairs as I had free warranty, worried me quite a lot ever since. Furthermore, the 1050 graphics card is making me less confident in my deep learning models due to it's small VRAM. The more I had it in my hands, the less I think it is truly as good as I thought. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kF7ntNcvafs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/kF7ntNcvafs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 A device that made me less confident in my abilities (yes I'm not that confident when it comes to tech at times), made we rethink what I truly need in a laptop. I have since explored other small form factor laptops and having very mixed opinions on what I truly require.
 
@@ -130,7 +130,7 @@ so my quest in searching an external monitor begins!
 
 I was inspired by my Gigabyte Teamate Lee Weijuin when he showed me his external monitor. After looking at a video by Great Scott, I knew I had to get my hands on one somehow.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6SOXMDb4cjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/6SOXMDb4cjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I also checked out my mentor Mr Teo Shin Jen's instructables guide on how to repurpose a dead laptop's screen and find that his method truly is the path of least resistance. Link here: [https://www.instructables.com/id/How-to-Re-purpose-dead-laptops-LCD/](https://www.instructables.com/id/How-to-Re-purpose-dead-laptops-LCD/)
 

@@ -1,5 +1,8 @@
+
 source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
 gem "jekyll-github-metadata"
+gem "jekyll"
 gem "jekyll-octicons"
 gem "jemoji"
+gem "jekyll-paginate-v2"
+gem "jekyll-theme-cayman"
