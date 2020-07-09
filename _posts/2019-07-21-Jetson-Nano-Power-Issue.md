@@ -13,14 +13,12 @@ The Jetson Nano is a very powerful board with the ARM A-52 Quad Core Processor, 
 # The Problem Part 1
 The NVIDIA Jetson Nano, due to it's powerful components, sadly consumes more power than say a Raspberry pi. I first received this board 19th June 2019, and was pleased with all the powering options I had. There was a micro USB on board, a barrel slot which supported 5V 4A, and 2 power input pins, each taking up to a maximum of 3A at 5V. 
 
-#### To do: put image here
-
 I followed the Jetson Nano's getting started guide, flashed the jetson Nano image with Etcher, plugged it in the SD card slot, powered it up, and it shuts down again by itself. I went on to troubleshoot the image but due to my lack of knowledge in this regard, to no avail. Later, I requested help from a (friend of mine)[codingIndex.xyz] to troubleshoot with me, and believe it or not, the Jetson Nano did not show signs of failed botting, but instead booted without any problems at all. This made me very confused, as it seems that this problem really didn't exist at all. How do I replicate it? I went back home, powered the Jetson Nano, and it booted without any issues agian! Go figure!
 
 # The Problem Part 2
 After almost a month's time of shoving the Jetson Nano into the racks due school and other commitments, I decided to revisit it and start on creating the AGV. So I booted it and to my surprise, the problem presented itself again. I plugged in the micro-USB cable, saw the LED indicator light up, then it dimmed down again. There are videos documenting this exact process on youtube, so I was sure this isn't a one-off event.
 
-#### Todo: show the reboot flow (video) (use video links)
+<iframe width="100%" src="https://www.youtube.com/watch?v=hV6Znadax-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Seeing this made me really think what the board is doing. I remember encountering this in a previous school project, whereby an MP3 player kept on restarting itself in a specific section of the MP3 file. I dug around and looked at the max current of MP3 player and microcontrollers used, I found out that the MP3 player is drawing more current than I expected, exceeding the rated output of the microcontroller itself, causing what is called a "Brown-out" of the microcontroller. Similarly, I suspect the Jetson Nano took more than 5V2A, albeit the Jetson Nano didn't restart itself, possibly due to safety reasons. Sure enough, just by supplying a little more current directly to the GPIO pins, common grounding the 2 supplies, I finally saw the Jetson Nano Boot Screen.
 
@@ -45,7 +43,7 @@ Following the consistent boot of Jetson Nano, I decided to end this madness once
 
 <i> "But Bryan, that limits the capability of the Jetson Nano!" </i>
 
-Ok ok, that's true, but its better than having it sit there and do nothing. Also, I think during the development phases, it is ok to switch between the different power modes. For now, I want to do some setup through the image's GUI, so attaching my peripherals will definitely cause it to shutdown due to a lack of power. I followed this guide and successfully changed it
+Ok ok, that's true, but its better than having it sit there and do nothing. Also, I think during the development phases, it is ok to switch between the different power modes. For now, I want to do some setup through the image's GUI, so attaching my peripherals will definitely cause it to shutdown due to a lack of power. I followed [this](https://www.jetsonhacks.com/2019/04/10/jetson-nano-use-more-power/) guide and successfully changed it.
 
 <i> "But Bryan, you can get a 5V3A powerbank!" </i>
 
