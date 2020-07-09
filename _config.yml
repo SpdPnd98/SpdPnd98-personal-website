@@ -4,6 +4,7 @@ style: light
 plugins:
   - jekyll-octicons
   - jekyll-github-metadata
+  - jekyll-paginate-v2
   - jemoji
 
 permalink: /:year/:month/:day/:title/
@@ -21,7 +22,7 @@ projects:
   # sort_by options:
   #   - pushed
   #   - stars
-  limit: 15
+  limit: 3
   exclude:
     forks: true
     projects:
@@ -38,6 +39,27 @@ social_media:
   # twitter: your_username
   # youtube: your_username
   # vk: your_username
+
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 6
+  permalink: '/page/:num/'
+  sort_field: 'date'
+  sort_reverse: true
+
+collections: 
+
+  posts:
+    output: true
+    permalink: "/:path/"
+
+  digitalFabrication:
+    output: true
+    permalink: "/digitalFabrication/:path/"
+
+  people:
+    output: false
 
 topics:
   

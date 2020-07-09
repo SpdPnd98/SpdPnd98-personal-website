@@ -5,8 +5,8 @@
 {% endif %}
 
 <div style="text-align: center;">
-  <div style="left: 0; right: 0; margin: auto; position: relative;">
-    <img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;"> 
+  <div style="margin: auto; position: relative;">
+    <img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px; margin-left: auto; margin-right: auto;"> 
   </div>
 </div>
 <h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">Bryan <br/>Tee Pak Hong</h1>
@@ -56,3 +56,4 @@
     {% endif %}
   </div>
 {% endif %}
+{% include menu.html %}
