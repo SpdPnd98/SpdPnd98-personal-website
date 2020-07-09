@@ -1,0 +1,145 @@
+
+
+
+
+
+
+
+
+<!--  -->
+
+
+
+
+<!--  -->
+
+<!doctype html>
+<html class="height-full">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Note: The following tutorial explains how to use darkflow framework, which is a tensorflow implementation, and integrate it with Intel Movidius Neural Compute Stick. This tutorial has been tested on Ubuntu 16.04LTS, CUDA9.0 and CUDNN8.0, and assumes you already have them installed.PrefaceIt has c..." />
+    <title>Bryan Tee Pak Hong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="bg-blue" >
+
+
+
+
+
+  <div class="container-lg py-6 p-responsive text-center bg-contrast-blue height-full">
+
+    <div class="container-xl f4 text-left border rounded-2 bg-white p-3 p-sm-5 ">
+      <p class="f5"><a href="/" class="d-flex flex-items-center"><svg height="16" class="octicon octicon-chevron-left mr-2 v-align-middle" fill="#0366d6" aria-label="Home" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M9.78 12.78a.75.75 0 01-1.06 0L4.47 8.53a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L6.06 8l3.72 3.72a.75.75 0 010 1.06z"></path></svg>Blogs</a></p>
+      <h1 class="f00-light lh-condensed">How to use darkflow with Intel Movidius Neural Compute Stick</h1>
+      <p class="text-gray ">Published Mar 31, 2019</p>
+      
+  
+  <div class="article">
+    <p><strong>Note:</strong> The following tutorial explains how to use <code class="highlighter-rouge">darkflow</code> framework, which is a tensorflow implementation, and integrate it with <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code>. This tutorial has been tested on <code class="highlighter-rouge">Ubuntu 16.04LTS</code>, <code class="highlighter-rouge">CUDA9.0</code> and <code class="highlighter-rouge">CUDNN8.0</code>, and assumes you already have them installed.</p>
+
+<h1 id="preface">Preface</h1>
+<p>It has come to my attention that edge image classification is highly under-discussed. This could be due to the lack of large community at the moment, or maybe frameworks are not optimized for edge computing. In the official documentation of <code class="highlighter-rouge">NCSDK API</code>, the 2 most used frameworks are <code class="highlighter-rouge">caffe</code> and <code class="highlighter-rouge">tensorflow</code>, which inspired me to use my knowledge on <code class="highlighter-rouge">tensorflow</code> to check out <code class="highlighter-rouge">darkflow</code>. However, <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code> is rarely used together with the said framework. Hence I began on my journey scouring the web and all documentations I can find to get <code class="highlighter-rouge">darkflow</code> to work on the <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code>.</p>
+
+<p>Although <code class="highlighter-rouge">caffe</code> is a very powerful framework, and <code class="highlighter-rouge">tensorflow</code> provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with <code class="highlighter-rouge">darknet</code>, a <code class="highlighter-rouge">C/C++</code> implemented framework for yolov2 model, hence I was curious to see what <code class="highlighter-rouge">darkflow</code>, the <code class="highlighter-rouge">tensorflow</code> implementation of <code class="highlighter-rouge">darknet</code>, has in store. FUrthermore, I have found that <code class="highlighter-rouge">caffe</code>’s method of labeling and improving training speed to be confusing, <code class="highlighter-rouge">darkflow</code> however is faster to market as labeling is simpler, training is straightforward, and produces good results.</p>
+
+<p>With that being said, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at <a href="https://www.modelconverge.xyz">modelconverege.xyz</a>, I would like to show you my research results and steps required for proper training.</p>
+
+<p>Note this blogpost is not for beginners. Check out my blog for <a href="https://modelconverge.xyz/2019/03/31/7-steps-to-Image-Classification-with-AI/">7 steps to Image Classification with AI</a> for the basic idea of the steps I follow.</p>
+
+<p>The aim of this tutorial is just to setup darkflow, setup <code class="highlighter-rouge">NCSDK2</code> and compile a graph file that is intepretable by the <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code>, and read the output, ending off with an exmaple.</p>
+
+<h1 id="setup">Setup</h1>
+<p>Clone the <code class="highlighter-rouge">darkflow</code> repository:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/thtrieu/darkflow
+</code></pre></div></div>
+
+<p>Please see the official docs for training steps, but for TLDR:</p>
+<ul>
+  <li>get training data</li>
+  <li>use a labeling image tool to label your images in xml format, link <a href="https://github.com/tzutalin/labelImg">here</a></li>
+  <li>generate your labels in .txt file</li>
+  <li>edit cfg file (eg, filter and classes in yolov2 model)</li>
+  <li>pass the above to darkflow with the following command</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VALUE <span class="o">=</span> 0.0 to 1.0 <span class="o">(</span>amount of GPU used<span class="o">)</span>
+./flow <span class="nt">--labels</span> labels.txt <span class="nt">--model</span> model.cfg <span class="nt">--dataset</span> /path/to/dataset <span class="nt">--annotations</span> /path/to/xml/annotations <span class="se">\</span>
+ <span class="nt">--train</span> <span class="nt">--trainer</span> YOUR_PREFERENCE <span class="nt">--batch</span> size BATCH_SIZE <span class="nt">--gpu</span> VALUE <span class="nt">--load</span> YOUR_CHECKPOINT
+</code></pre></div></div>
+
+<p>After your training, you should see .meta files and .pb files in ckpt directory of darkflow. These are graph files compatible with Tensorflow, but not with NCSDK2.</p>
+
+<p>Generate the frozen pb file with the following command:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./flow <span class="nt">--model</span> /path/to/cfg <span class="nt">--load</span> <span class="o">(</span>your tensorflow weights<span class="o">)</span> <span class="nt">--savepb</span> /path/to/output
+</code></pre></div></div>
+
+<p>Next, clone the following 2 repositories: yolo-darkflow-movidius &amp; NCSDK2.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/SpdPnd98/yolo-darkflow-movidius.git
+git clone t clone <span class="nt">-b</span> ncsdk2 http://github.com/Movidius/ncsdk <span class="o">&amp;&amp;</span> <span class="nb">cd </span>ncsdk <span class="o">&amp;&amp;</span> make <span class="nb">install</span>
+</code></pre></div></div>
+<p>use <code class="highlighter-rouge">-b ncsdk2</code> to clone NCSDK2, you can clone NCSDK, but will need to make modifications according to this <a href="https://movidius.github.io/ncsdk/ncapi/python_api_migration.html">website</a>.</p>
+
+<p>if you have caffe installed, comment out the path to your caffe directory, as ncsdk examples depend on and comes with a caffe installation. ncsdk2 also uninstalls any installation of OpenCV. If you however wish to ignore their examples, feel free to use <code class="highlighter-rouge">make api</code> instead of <code class="highlighter-rouge">make</code>, as we will show below.</p>
+
+<p>Editing the cfg file follows the same format for darknet, please read the documentation <a href="https://pjreddie.com/darknet/yolo/">here</a>.</p>
+
+<h1 id="preparing-for-intel-movidius-neural-compute-stick">Preparing for Intel Movidius Neural Compute Stick</h1>
+<p>The command to convert the graph file output to a graph file that complies to Intel Movidius Stick is the command below:
+<code class="highlighter-rouge">mvNCCompile -s 12 /path/to/graph.pb</code>
+please refer <a href="https://movidius.github.io/ncsdk/tools/compile.html">here</a> for more arguments.</p>
+
+<p>the -s argument indicates the amount of SHAVES used. SHAVES is analogous to core counts, max is 12 SHAVES. Read <a href="https://movidius.github.io/ncsdk/ncs.html">here</a> for more details.</p>
+
+<p>Next, we need to create a symbolic link in <code class="highlighter-rouge">yolo-darkflow-movidius</code> directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>yolo-darkflow-movidius/
+pip <span class="nb">install</span> <span class="nt">--upgrade</span> cython
+
+<span class="nb">ln</span> <span class="nt">-s</span> ../darkflow/darkflow darkflow
+</code></pre></div></div>
+<p>At this point, preparations are all done!</p>
+
+<h1 id="example-on-pclaptop">Example on PC/Laptop</h1>
+
+<p>To demonstrate an example, run the following commands to prepare:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ../darkflow
+wget <span class="nt">-O</span> tiny-yolo-voc.cfg https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov2-tiny-voc.cfg
+wget <span class="nt">-O</span> tiny-yolo-voc.weights https://pjreddie.com/media/files/yolov2-tiny-voc.weights
+
+python3 ./flow <span class="nt">--model</span> tiny-yolo-voc.cfg <span class="nt">--load</span> tiny-yolo-voc.weights <span class="nt">--savepb</span>
+<span class="nb">cd</span> ../yolo-darkflow-movidius
+<span class="nb">mv  </span>darkflow/built_graph/
+mvNCCompile built_graph/tiny-yolo-voc.pb <span class="nt">-s</span> 12 <span class="nt">-in</span> input <span class="nt">-on</span> output <span class="nt">-o</span> built_graph/tiny-yolo-voc.graph 
+</code></pre></div></div>
+
+<p>Now, run this to see the result, with your <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code> plugged in:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 test_movidius.py <span class="nt">-i</span> video.avi
+</code></pre></div></div>
+<p>Congrats, you have succesfully run a TinyYOLO model on movidius stick! Expect similar results when exporting them to the edge!</p>
+
+<h1 id="edge-example">Edge example</h1>
+
+<p>Grab a coffee and something to do because the procedures are largely the same, but taking a lot longer in an environment like raspberry pi or other device. Do note to use <code class="highlighter-rouge">make api</code> instead of <code class="highlighter-rouge">make</code> when building ncsdk2.</p>
+
+<p>This time, you do not need to train a model, but just import a model like the example above.</p>
+
+<p>Hope this blog post has been of help. Drop me an email if you have any questions. Thanks.</p>
+
+  </div>
+
+    </div>
+  </div>
+
+
+
+    <div class="container-md p-3 text-gray text-center"> Copyright &#169 ModelConverge 2020</div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,121 @@
+
+
+
+
+
+
+
+
+<!--  -->
+
+
+
+
+<!--  -->
+
+<!doctype html>
+<html class="height-full">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="PrefaceHello guys, Around 1 year ago, I have been to a talk by YuFeng Guo in Singapore. I have documented his talk in another blog post of different domain but I wish to revise my thoughts after 1 year of digestion.Not only that, I have used the same framework in AI, here is my 7 steps to Image C..." />
+    <title>Bryan Tee Pak Hong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="bg-blue" >
+
+
+
+
+
+  <div class="container-lg py-6 p-responsive text-center bg-contrast-blue height-full">
+
+    <div class="container-xl f4 text-left border rounded-2 bg-white p-3 p-sm-5 ">
+      <p class="f5"><a href="/" class="d-flex flex-items-center"><svg height="16" class="octicon octicon-chevron-left mr-2 v-align-middle" fill="#0366d6" aria-label="Home" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M9.78 12.78a.75.75 0 01-1.06 0L4.47 8.53a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L6.06 8l3.72 3.72a.75.75 0 010 1.06z"></path></svg>Blogs</a></p>
+      <h1 class="f00-light lh-condensed">7 Steps to Image Classification with AI</h1>
+      <p class="text-gray ">Published Mar 31, 2019</p>
+      
+  
+  <div class="article">
+    <h1 id="preface">Preface</h1>
+<p>Hello guys, Around 1 year ago, I have been to a talk by YuFeng Guo in Singapore. I have documented his talk in another blog post of different domain but I wish to revise my thoughts after 1 year of digestion.</p>
+
+<p>Not only that, I have used the same framework in AI, here is my 7 steps to Image Classification with AI.</p>
+
+<h2 id="easy-7-steps">Easy 7 steps</h2>
+<p>I have found great succes over the course of applying the following 7 steps, so here they are:</p>
+<ol>
+  <li>Gathering Data</li>
+  <li>Preparing that Data</li>
+  <li>Choosing a Model</li>
+  <li>Training</li>
+  <li>Evaluation</li>
+  <li>Hyperparameter Tuning</li>
+  <li>Prediction</li>
+</ol>
+
+<h3 id="step-1-gather-data">Step 1. Gather Data</h3>
+<p>Gathering data is easy right? Well, maybe. Sometimes, you just have the data you need before you even think of solving the problem, but for AI/ML enthusiasts like us, data is like the new oil, if you get it, sprinkle a little bit of AI, ~ BAM ~, a fresh hot recipe for a startup is brewed. I recommend using a batch downloader and gather your initial training data from the public domain, just to get a proof of concept. Another (even better) way is to check if the problem you have at hand has ever been somewhat involved in an online competiton like Kaggle’s competitions etc.</p>
+
+<p>Depending on your framework, you may need to save your data in different formats.</p>
+
+<p>Of course, to make things easier, a format as such will suffice (minimal):</p>
+
+<pre><code class="language-Directory">Data
+| Images
+| Annotations
+</code></pre>
+<p>Store all your data in the Images directory</p>
+
+<h3 id="step-2-preparing-data">Step 2: Preparing Data</h3>
+<p>This step mainly focuses on filtering your data and labeling your data. Take a look at all your data, are there duplicates? Are there images that are irrelevant? Are there images with weird file extensions (.gif, .ico, etc.)? Delete them if need be, make sure your data is as clean as possible.</p>
+
+<p>Congratulations! You’ve passed a big hurdle for training AI models at this point!</p>
+
+<p>Now, we need to label our precious, clean data. Again, depending on your choice of classification, this may or may not be required.</p>
+
+<p>This step includes drawing a boundary box over your image data (assuming that’s what you have) and generate an XML file with your image’s classes.</p>
+
+<p>Also, create a labels.txt that has all your classes in different lines.</p>
+
+<p>Another topic we discuss here would be a train-test split. A lot of people will tell you different train-test split ratios, but generally a 9:1 to a 10:1 is a good split.</p>
+
+<p>After this step, congrats! Because you have completed all the boring checklist!</p>
+
+<h3 id="step-3-choosing-a-model">Step 3: Choosing a model</h3>
+<p>Now, at this step, you may be tempted to just choose one of the many algorithms and see the result. I have tested some of the algorithms and indeed, sometimes due to data incompleteness, characteristics of data etc, the benchmarks documented may be slightly off compared to what you experience, but for scientific reasons I believe looking at the various models is beneficial.</p>
+
+<p>More details on algorithms and how it compares to other algs here: <a href="https://pjreddie.com/darknet/yolo/">darknet supported algoritms</a> and <a href="https://medium.com/zylapp/review-of-deep-learning-algorithms-for-image-classification-5fdbca4a05e2">Other good algorithms</a></p>
+
+<h3 id="step-4-training">Step 4: Training</h3>
+<p>Finally, pass in your training dataset, labels, annotations, model files into your model/framework. The methods of training differes from framework to framework, but generally this step is considered the easiest.</p>
+
+<p>The AI algorithm will generate layers that contain important features of a class. After this phase the model will be able to recognize objects in images!</p>
+
+<h3 id="step-5-evaluation">Step 5: Evaluation</h3>
+<p>Evaluation basically means to see how accurate your weights are by benchmarking your model to the test dataset. Your model (ideally) should not overfit nor underfit. Good accuraccies around 95-98% IMO, but may vary according to algorithms, features, and datasets.</p>
+
+<p>There are a lot of tools for people to choose from, my favorites being <code class="highlighter-rouge">Tensorboard</code> and <code class="highlighter-rouge">mAP</code>. Theories are explained in a seperate blog post.</p>
+
+<h3 id="step-6-hyperparameter-tuning">Step 6: Hyperparameter Tuning</h3>
+<p>In Image recognition sense, hyperparameters have a wide range, from augmentation of image to decay rate and learning rate. Upon evaluating the model, you can tune the hyperparameters to improve the performance of your final model, making it converge faster and/or become more accurate. The possibilities are endless, but not for the faint of heart. For beginners, stick to the basic trainings, and tune only if you need to, going back all the way to Step 1 at times just to ge the best model possible.</p>
+
+<h3 id="step-7-prediction">Step 7: Prediction</h3>
+<p>Finally we have reached the last step, which is evaluating the model with data the model has not seen before. This moment in my opinion is the most exciting, as we can see how our model performs outside of a controlled environment, and detect any loopholes the model may have, including more edge cases and retrain the model. Thought it may not be entirely neccessary, this is truly where the fun begins, stress testing your model to its limit.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>These are the 7 steps that I usually follow when training my own image classifier, and has brought me success in evaluating my model’s success/failure. Drop me an email if you have any question and I hope this blog post has been of value to you. Thanks</p>
+
+  </div>
+
+    </div>
+  </div>
+
+
+
+    <div class="container-md p-3 text-gray text-center"> Copyright &#169 ModelConverge 2020</div>
+  </div>
+</body>
+</html>
+
