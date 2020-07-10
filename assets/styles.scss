@@ -21,6 +21,13 @@ body.bg-blue {
   background: #9bc4cb !important;
 }
 
+body.bg-pic {
+  background-image: url(../images/beach.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 img {
   max-width: 100%; 
   display: block; 
@@ -177,3 +184,4 @@ tr:nth-child(even) {
   width: 0;
   height: 0;
 }
+
