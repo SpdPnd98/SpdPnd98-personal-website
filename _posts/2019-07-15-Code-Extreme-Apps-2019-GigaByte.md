@@ -64,7 +64,13 @@ Hang on a second, is that a non-operational button! GGWP. I went back to work. S
 With that being said, everything else was working well and we have a 95% completed checkpoint, one that is good enough for pitching.
 
 Below is a demonstration of the web interface:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ym8EqnRknBY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p align="center">
+<a href="https://www.youtube.com/watch?v=ym8EqnRknBY" >
+  <img src="http://img.youtube.com/vi/ym8EqnRknBY/0.jpg" title="BelanjaOne"/>
+</a>
+<em>Demo of BelanjaOne</em>
+</p>
 
 # Before pitching
 

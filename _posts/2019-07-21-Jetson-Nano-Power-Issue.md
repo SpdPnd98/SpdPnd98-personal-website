@@ -8,7 +8,10 @@ In today's day and age, there is a lot of untapped potential for robots, such as
 
 The Jetson Nano is a very powerful board with the ARM A-52 Quad Core Processor, 4GB DDR4 Memory, and 128CUDA cores Maxwell Architecture GPU. And it only costs USD99! For a form factor that is this small, with dedicated graphics, this development board is truly a steal. After shipping and custom taxes, the overall cost bumped up to SGD200+ (<i> ouch </i>). Just when I thought development can commence immediately, the true battle for <i>Power</i> was just about to happen (pun intended).
 
+<p align="center">
 <img src="/images/JetsonNano.jpg"/>
+<em>Jetson Nano</em>
+</p>
 
 # The Problem Part 1
 The NVIDIA Jetson Nano, due to it's powerful components, sadly consumes more power than say a Raspberry pi. I first received this board 19th June 2019, and was pleased with all the powering options I had. There was a micro USB on board, a barrel slot which supported 5V 4A, and 2 power input pins, each taking up to a maximum of 3A at 5V. 
@@ -18,7 +21,12 @@ I followed the Jetson Nano's getting started guide, flashed the jetson Nano imag
 # The Problem Part 2
 After almost a month's time of shoving the Jetson Nano into the racks due school and other commitments, I decided to revisit it and start on creating the AGV. So I booted it and to my surprise, the problem presented itself again. I plugged in the micro-USB cable, saw the LED indicator light up, then it dimmed down again. There are videos documenting this exact process on youtube, so I was sure this isn't a one-off event.
 
-<iframe width="100%" src="https://www.youtube.com/watch?v=hV6Znadax-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p align="center">
+<a href="https://www.youtube.com/watch?v=hV6Znadax-Q" >
+  <img src="http://img.youtube.com/vi/hV6Znadax-Q/0.jpg" title="Boot Problems"/>
+</a>
+<em>Booting issues faced by netizens</em>
+</p>
 
 Seeing this made me really think what the board is doing. I remember encountering this in a previous school project, whereby an MP3 player kept on restarting itself in a specific section of the MP3 file. I dug around and looked at the max current of MP3 player and microcontrollers used, I found out that the MP3 player is drawing more current than I expected, exceeding the rated output of the microcontroller itself, causing what is called a "Brown-out" of the microcontroller. Similarly, I suspect the Jetson Nano took more than 5V2A, albeit the Jetson Nano didn't restart itself, possibly due to safety reasons. Sure enough, just by supplying a little more current directly to the GPIO pins, common grounding the 2 supplies, I finally saw the Jetson Nano Boot Screen.
 
@@ -32,9 +40,14 @@ Below are the tools I used:
 
 I have procured the items at Pit Money in JCube, Singapore. This is a pretty simple modification of the MicroUSB cable, just cut off the MircoUSB side, find the power cables (usually red and black), then solder on the jumpers, insulate the cables individually, verify the terminals have a 5V potential difference, finally tidy it up.
 
+<p align="center">
 <img src="/images/WireFull.jpg">
+<em> view of full wire</em>
+</p>
+<p align="center">
 <img src="/images/WireJoints.jpg">
-
+<em>view of main modification</em>
+</p>
 After the modifications, the Jetson Nano is able to boot consistently! Cheers!
 
 # Permanent Solution: Power Mode

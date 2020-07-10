@@ -19,7 +19,13 @@ Well, I'd agree with that to some degree. But as someone who looks at a computer
 
 Not saying my previous system is not capable, but my only big gripe with it is that I needed to bring a power brick that is literal with it's name, a brick, not to mention the somewhat heavy weight of the laptop and it's short battery life. I also dropped my Nitro V before and immediately it had a small bent. The annoying elevation on the left, although went away after I sent for repairs as I had free warranty, worried me quite a lot ever since. Furthermore, the 1050 graphics card is making me less confident in my deep learning models due to it's small VRAM. The more I had it in my hands, the less I think it is truly as good as I thought. 
 
-<iframe width="100%" src="https://www.youtube.com/embed/kF7ntNcvafs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p align="center">
+<a href="https://www.youtube.com/watch?v=kF7ntNcvafs&feature=emb_title" >
+  <img src="http://img.youtube.com/vi/kF7ntNcvafs/0.jpg" title="shaky Nitro V"/>
+</a>
+<em>Problems with Acer Nitro V</em>
+</p>
+
 
 A device that made me less confident in my abilities (yes I'm not that confident when it comes to tech at times), made we rethink what I truly need in a laptop. I have since explored other small form factor laptops and having very mixed opinions on what I truly require.
 
@@ -47,10 +53,10 @@ As of now, I'm listing my acer one 10 on Carousell. It's still looking for a hom
 # Mistake 2; handovers from friend's siblings
 
 I next stumbled upon a 14-inch Fujitsu Lifebook S series. It has a pretty capable system with a 3rd gen i7 processor, 8Gb RAM (4GB soldered and 4 GB additional), and a full sized keyboard, my only gripe was the terribly bad TN panel it came with. I'm pretty sure if anyone got that, they would be very happy to use it as their daily drive (if it didn't look soo beat up). That being said, i was still satisfied with it's performance as I wiped the disk and installed ubuntu on it. I would really use it if forced to do so.
-
+<p align="center">
 <img src="/images/sh782.jpg"/>
-*note: I got a black one*
-
+<em>note: I got a black one</em>
+</p>
 The scary part came when I was in school one day using it. I laid my hand on the left palm rest, and lo and behold, it rebooted. This led me to believe that this laptop was given up primarily for this reason. It soon became very consistent and really annoyed me. Not only that, i actually felt a small shock at the palm rest resembling static, making me very paranoid of using it ever since. 
 
 All these led me to believe the device was past it's lifespan. So I was forced to use my trusty acer nitro V while I searched for another device.
@@ -99,9 +105,12 @@ My next step was to remove the sticker on the device, clean the device physicall
 
 # How hard was it?
 
-Stupidly enough, i did not take a picture of the before and after cleaning the laptop. However, here's how it looked like on the listeing:
+Stupidly enough, i did not take a picture of the before and after cleaning the laptop. However, here's how it looked like on the listing:
 
+<p align="center">
 <img src="/images/before-cleaning.jpg"/>
+<em>Before Cleaning X220 </em>
+</p>
 
 I bought some general LCD panel cleaning tools to clean everything except the electronics. I also bought a compressed air blower to clean the fans.
 
@@ -130,7 +139,12 @@ so my quest in searching an external monitor begins!
 
 I was inspired by my Gigabyte Teamate Lee Weijuin when he showed me his external monitor. After looking at a video by Great Scott, I knew I had to get my hands on one somehow.
 
-<iframe width="100%" src="https://www.youtube.com/embed/6SOXMDb4cjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p align="center">
+<a href="https://www.youtube.com/embed/6SOXMDb4cjI" >
+  <img src="http://img.youtube.com/vi/6SOXMDb4cjI/0.jpg" title="External Monitor!"/>
+</a>
+<em>External Monitor tutorial by GreatScott!</em>
+</p>
 
 I also checked out my mentor Mr Teo Shin Jen's instructables guide on how to repurpose a dead laptop's screen and find that his method truly is the path of least resistance. Link here: [https://www.instructables.com/id/How-to-Re-purpose-dead-laptops-LCD/](https://www.instructables.com/id/How-to-Re-purpose-dead-laptops-LCD/)
 
@@ -140,7 +154,10 @@ After a long wait, I tested the screen with the controller, and to my surprise i
 
 # 1 + 1 is not always just 2
 
-<img src="/images/thinkpad-with-screen.svg"/>
+<p align="center">
+<img src="/images/thinkpad-with-screens.png"/>
+<em> Tada! Thinkpad with external monitor!</em>
+</p>
 
 With my simple and cheapo combo, I have a dual monitor, awesome keyboard and fast boot time setup. This is really all I need to be truly productive as anything power hungry can be done in the cloud if so needed. This setup helped me finish this blog way faster than I could with my TV screen and Nitro V due to the similar screen size, inviting keyboard, and less multitasking required. Task that I used to need to split screen can be done in 2 screens which is the best feeling ever! I am still evaluating the setup to see whether this setup really is just a laptop and a screen or will it bring more benefits that maybe I have yet to discover. Regardless, here is the price breakdown:
 
