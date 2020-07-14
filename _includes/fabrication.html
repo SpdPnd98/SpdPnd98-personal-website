@@ -1,0 +1,13 @@
+<a href="{{ site.baseurl }}{{ post.url }}" style="color: black; text-decoration: none;">
+<div class="border border-gray-light bg-white rounded-2 p-3 d-flex flex-column flex-md-row flex-md-items-center">
+      <image src="{{post.img_url}}" class="col-md-4d-flex flex-justify-between flex-items-start" style="margin: 0 auto; max-width: 200px;";/>
+      <div class="d-block text-left ml-3">
+        <h1 class="f2 lh-condensed ">
+            {{ post.title }}
+        </h1>
+        <em>{{ post.rating }}★</em>
+        <p> {{post.excerpt}}</p>
+      </div>
+    
+  </div>
+</a>
