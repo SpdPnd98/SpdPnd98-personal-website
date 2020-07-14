@@ -9,13 +9,20 @@ plugins:
 
 permalink: /:year/:month/:day/:title/
 
-defaults:
+defaults: # set the loading layout for each page
   -
     scope:
       path: "" # an empty string here means all files in the project
       type: "posts"
     values:
       layout: "post"
+  
+  -
+    scope:
+      path: ""
+      type: "digitalfabrication"
+    values:
+      layout: "fabrication"
 
 projects:
   sort_by: pushed
@@ -40,26 +47,19 @@ social_media:
   # youtube: your_username
   # vk: your_username
 
-pagination:
-  enabled: true
-  collection: 'posts'
-  per_page: 9
-  permalink: '/page/:num/'
-  sort_field: 'date'
-  sort_reverse: true
-
 collections: 
-
-  posts:
+  digitalfabrication:
     output: true
-    permalink: "/:path/"
-
-  digitalFabrication:
-    output: true
-    permalink: "/digitalFabrication/:path/"
 
   people:
     output: false
+
+
+pagination:
+  enabled: true
+  per_page: 9
+  sort_field: 'date'
+  sort_reverse: true
 
 topics:
   
