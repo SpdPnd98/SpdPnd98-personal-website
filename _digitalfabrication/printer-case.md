@@ -24,5 +24,5 @@ All in all though, it fixed my problems, and I am more than grateful to use it t
 <img src="/images/inside.jpg">
 <em>Cables in a box</em>
 
-<img src="/images/outside.jpg">
+<img src="/images/tidied.jpg">
 <em>Looking from the outside, it is much neater, now I just need a 80mm fan</em>
