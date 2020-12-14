@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-12-14T04:08:55+00:00</updated><id>/feed.xml</id><title type="html">SpdPnd98-personal-website</title><subtitle>My personal Website! Forked from https://github.dev</subtitle><entry><title type="html">I did a project a day, this is what I got</title><link href="/2020/12/13/I-did-a-project-a-day/" rel="alternate" type="text/html" title="I did a project a day, this is what I got" /><published>2020-12-13T00:00:00+00:00</published><updated>2020-12-13T00:00:00+00:00</updated><id>/2020/12/13/I-did-a-project-a-day</id><content type="html" xml:base="/2020/12/13/I-did-a-project-a-day/">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;/h1&gt;
+&lt;p&gt;The saying goes, “curiousity kills the cat”. What if the cat wanted to stay alive forever, and never dared to make the first step, killing its curiousity forever? Thinking about this question, it made me really wonder whether the path I have chosen is a good fit for me.&lt;/p&gt;
+
+&lt;p&gt;Hi, I am Bryan, a graduate of Singapore Polytechnic, and a current student in NUS majoring in Computer Science. Within the span of less than 6 months, I have met bright individuals that are leaps and bounds beyond me, some younger than me and some just about my age. It got me thinking, what did they do differently that allowed them to be who they are today? If so, how much potential have I actually missed out, thinking that I was already at my peak?&lt;/p&gt;
+
+&lt;p&gt;I tried to study really hard, but touch wood I think I barely passed for some modules. I reflected on how I studied, my patterns and my behaviours. If I could turn back time, I’d do the same about of deep thinking, work vs study, soft-skills vs technical skills etc; and getting distracted by all the possible projects that I could do, but didn’t have enough time. Was I just not cut out for studying?&lt;/p&gt;
+
+&lt;p&gt;A small voice in me said &lt;i&gt;“Not enough time?!?! Tis so easy I can code it in 10 minutes!”&lt;/i&gt; At the time, I did have a few mini projects in mind that are easy to complete. But there were some that had to take longer than usual as well!&lt;/p&gt;
+
+&lt;h1 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h1&gt;
+&lt;p&gt;I came across this youtube channel by &lt;a href=&quot;https://www.youtube.com/user/ZackFreedman?app=desktop&quot;&gt;Zack Freedman&lt;/a&gt;, and was inspired by his Among us IRL video, where he made various among us props within the span of a week. Sure, they were not perfect, but they were completed and function as per intended!&lt;/p&gt;
+
+&lt;p&gt;Also, the channel Unus Annus really hit me when they actually deleted a channel with millions of subscribers. Check out &lt;a href=&quot;https://www.youtube.com/watch?v=jm7ZAMAsPxI&quot;&gt;Markiplier&lt;/a&gt; channel for his thoughts on Unus Annus. I could relate to the experience when I left my high school, but never to the fullest extent due to me having so much regrets.&lt;/p&gt;
+
+&lt;p&gt;I wanted a change.&lt;/p&gt;
+
+&lt;p&gt;Since I was in my winter break, I thought why not do a project a day and challenge my boundaries?&lt;/p&gt;
+
+&lt;p&gt;You can see my Journey on Instagram: &lt;a href=&quot;https://www.instagram.com/modelconverge/&quot;&gt;https://www.instagram.com/modelconverge/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;day-1-27th-november-2020&quot;&gt;Day 1, 27th November 2020&lt;/h2&gt;
+&lt;p&gt;I focused on getting my old Jetson Nano tank up and running again. I didn’t make a blog post about it as it was too infantile to be called a masterpiece (which I still plan to make it my magnum opus). However, too big of a project will just be a white elephant. So I started to get it running. For some reason, the tank tracks were catching on the battery holder, which I still didn’t know what is causing it till this day.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-2-28th-november-2020&quot;&gt;Day 2, 28th November 2020&lt;/h2&gt;
+&lt;p&gt;I copied a pan-tilt camera on Thingiverse, and flashed the ESP32-cam demo code. Next, I took the PCA9685 PWM servo driver to control the pan tilt camera through the GPIO pins on the Jetson Nano from a Jupyter Notebook. I met some permisssion problems with the keyboard library so I had to export the notebook as a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.py&lt;/code&gt; file and ran it from the command line instead.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-3-29th-november-2020&quot;&gt;Day 3, 29th November 2020&lt;/h2&gt;
+&lt;p&gt;I assembled a joystick, initially with an Arduino Pro micro, and then with an ESP8266. The goal was to send the message out, and I wanted to ensure the logic of my code was correct. I used MQTT to send, and it turned out fine. I tried using the Arduino Pro Micro with an ESP01 to send messages, but I didn’t have a logic shifter module nor enough resistors to make a resitor based level shifter circuit.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-4-30th-november-2020&quot;&gt;Day 4, 30th November 2020&lt;/h2&gt;
+&lt;p&gt;I revisited my part-time code maintainence work. There was a weird double click event which seems to be common on older ionic versions. I could not replicate it consistently, but many times enought to have a buggy experience. I can’t disclose too much, but it essentially involves reading the error logs online, and trying to replicate them.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-5-1st-december-2020&quot;&gt;Day 5, 1st December 2020&lt;/h2&gt;
+&lt;p&gt;I scavanged for any ESP32 in my stash, and I found one I got in Singapore Polytechnic that was in unknown condition. Lucky for me, I could program it with the ESP32 Wrover settings, changing only the Baud Rate to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;115200&lt;/code&gt;. I replaced the ESP8266 of my joystick and linked the joystick to the movement of the pan-tilt camera. I also met some problems when sending MQTT messages parsing, as the messages received seem to contain info from other topics.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-6-2nd-december-2020&quot;&gt;Day 6, 2nd December 2020&lt;/h2&gt;
+&lt;p&gt;I captured the ESP32 camera stream following a guide online. Initially I hoped to just use opencv to do so, but it turns out opencv couldn’t capture images in batches. Therefore, I had to read the ESP32 cam code as well as the mJPEG specifications to properly capture the stream and generate an image. In my spare time I also created a script to control the movement of the tank using the joystick.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-7-3rd-december-2020&quot;&gt;Day 7, 3rd December 2020&lt;/h2&gt;
+&lt;p&gt;I revisited my mining rig and my other systems, where me and 2 friends were about to start a business on selling computers, now just sitting in my dorm collecting dust. Out of curiousity, I wanted to see if some of the parts still worked, and whether I could change out my mining power supply. Believe it or not that took nearly a day. Also, I found out that my TV screen is still in working condition! The hdmi signal seems to require boosting now, and that’s why my laptop cannot connect to it but my desktop had no problems doing so.&lt;/p&gt;
+
+&lt;h1 id=&quot;post-mortem&quot;&gt;Post Mortem&lt;/h1&gt;
+&lt;p&gt;It’s true, some of the projects seem small and may not be called a “project” by its own right. Initially, I thought I would do something grandiose each day. But looking back, I completed essentially 5 things&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Got my Jetson Nano tank ready&lt;/li&gt;
+  &lt;li&gt;Setup a Pan-Tilt camera for the Jetson Nano&lt;/li&gt;
+  &lt;li&gt;Learnt how to capture the ESP32-cam stream&lt;/li&gt;
+  &lt;li&gt;Created a joystick to control the Jetson Nano tank as well as the Camera&lt;/li&gt;
+  &lt;li&gt;Upgraded my server to something more reasonable&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That was 4 things more than when I had a break between the end of my internship and the begining of my university life!&lt;/p&gt;
+
+&lt;p&gt;The exhiliarating feeling that rushes as the clock is ticking to midnight, that was reminiscent of my hackathon days with my pals. I soon knew what it all meant. The feeling that one day things will end, and whatever we did was who we were, and lastly to feel the mortality is to give it your all, until you won’t have any regrets. Although at times I could complete the project way before the time finished ticking, I find myself quickly jumping to the next project (of which I did not include here), those projects deserve a blog of their own. I felt how precious time was, and wanted to continue feeling that way.&lt;/p&gt;
+
+&lt;p&gt;That was a pretty fun week!&lt;/p&gt;
+
+&lt;p&gt;Why was this blogpost so late? Well, cuz I am still doing projects even till this day!&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading! Have a great day ahead!&lt;/p&gt;</content><author><name></name></author><summary type="html">Preface The saying goes, “curiousity kills the cat”. What if the cat wanted to stay alive forever, and never dared to make the first step, killing its curiousity forever? Thinking about this question, it made me really wonder whether the path I have chosen is a good fit for me.</summary></entry><entry><title type="html">My journey to the best developer’s setup</title><link href="/2019/08/31/My-journey-to-the-best-developer's-setup/" rel="alternate" type="text/html" title="My journey to the best developer’s setup" /><published>2019-08-31T00:00:00+00:00</published><updated>2019-08-31T00:00:00+00:00</updated><id>/2019/08/31/My-journey-to-the-best-developer's-setup</id><content type="html" xml:base="/2019/08/31/My-journey-to-the-best-developer's-setup/">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;/h1&gt;
+&lt;p&gt;Hello guys! As a tech enthusiast, finding the best tech has always been my dream. However, due to the lack of proper fundings I do have access to the latest RTX graphics cards, macbooks, high end builds etc. So, I decided to turn my sight to a different niche for the time being, which is “how do I get the most out of my money to make my best developer’s setup?”&lt;/p&gt;
+
+&lt;p&gt;Greatly inspired by codingIndex, take a look at his website &lt;a href=&quot;https://codingindex.xyz/2019/05/01/thinkpad-x220/&quot;&gt;here&lt;/a&gt;, he has written very strong and concise reasons to buying a Thinkpad X220 in 2019.&lt;/p&gt;
+
+&lt;p&gt;Without further ado, let’s get started with my personal journey!&lt;/p&gt;
+
+&lt;h1 id=&quot;what-system-do-i-have&quot;&gt;What system do I have?&lt;/h1&gt;
+&lt;p&gt;My current system is a Acer Nitro V 2018 version with pretty beefy specs. 16Gb of ram, IPS pannel, 8th gen i7 and 1050 graphics card (non-Ti). When I purchased it I had wayy too much problems with my previous laptop and if I had as much enthusiasm in computers at that time, I would’ve gotten a cheaper Thinkpad instead. However, given my budding Deep Learning interest, i think it was a neccessary evil and that laptop has since followed me through numerous competitions and prizes.&lt;/p&gt;
+
+&lt;p&gt;“Bryan! You already have such a good laptop! Why did you buy a small, less powerful Thinkpad! What a waste of money!”&lt;/p&gt;
+
+&lt;p&gt;Well, I’d agree with that to some degree. But as someone who looks at a computer way more often than regular users, I’ve since understood what is more important compared to the latest and fanciest tech like RTX laptops, 240Hz screens etc.&lt;/p&gt;
+
+&lt;p&gt;Not saying my previous system is not capable, but my only big gripe with it is that I needed to bring a power brick that is literal with it’s name, a brick, not to mention the somewhat heavy weight of the laptop and it’s short battery life. I also dropped my Nitro V before and immediately it had a small bent. The annoying elevation on the left, although went away after I sent for repairs as I had free warranty, worried me quite a lot ever since. Furthermore, the 1050 graphics card is making me less confident in my deep learning models due to it’s small VRAM. The more I had it in my hands, the less I think it is truly as good as I thought.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=kF7ntNcvafs&amp;amp;feature=emb_title&quot;&gt;
+  &lt;img src=&quot;http://img.youtube.com/vi/kF7ntNcvafs/0.jpg&quot; title=&quot;shaky Nitro V&quot; /&gt;
+&lt;/a&gt;
+&lt;em&gt;Problems with Acer Nitro V&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;A device that made me less confident in my abilities (yes I’m not that confident when it comes to tech at times), made we rethink what I truly need in a laptop. I have since explored other small form factor laptops and having very mixed opinions on what I truly require.&lt;/p&gt;
+
+&lt;h1 id=&quot;mistake-1-small-and-cheap-but-touch-screen&quot;&gt;Mistake 1: small and cheap but touch screen!&lt;/h1&gt;
+&lt;p&gt;I tried getting a touch screen laptop with the lowest I can personally afford. I bought an Acer One 10, which was pretty neat if you have the 4 Gb version and 64Gb internal storage. It’s pros are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;fast enough for regular task&lt;/li&gt;
+  &lt;li&gt;power efficient&lt;/li&gt;
+  &lt;li&gt;portable (11 inches)&lt;/li&gt;
+  &lt;li&gt;touch screen&lt;/li&gt;
+  &lt;li&gt;microusb charging port&lt;/li&gt;
+  &lt;li&gt;micro SD card slot&lt;/li&gt;
+  &lt;li&gt;full Windows 10 suite&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;and cons are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;small keyboard&lt;/li&gt;
+  &lt;li&gt;less powerful processor (Intel Atom)&lt;/li&gt;
+  &lt;li&gt;non-upgradable&lt;/li&gt;
+  &lt;li&gt;passive based touch screen (not compatible with Wacom tablet pens)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;However, I thought to myself at the time that the 32 Gb internal storage and 2Gb RAM is good enough for me. After using it for a while I started to really regretted that decision for 2 main reason: I really wanted to use a pen with it to write notes etc, but the pasive touch screen shattered my dreams; the small keyboard relaly hindered my switching between my main drive and this small laptop.&lt;/p&gt;
+
+&lt;p&gt;As of now, I’m listing my acer one 10 on Carousell. It’s still looking for a home if anyone is interested.&lt;/p&gt;
+
+&lt;h1 id=&quot;mistake-2-handovers-from-friends-siblings&quot;&gt;Mistake 2; handovers from friend’s siblings&lt;/h1&gt;
+
+&lt;p&gt;I next stumbled upon a 14-inch Fujitsu Lifebook S series. It has a pretty capable system with a 3rd gen i7 processor, 8Gb RAM (4GB soldered and 4 GB additional), and a full sized keyboard, my only gripe was the terribly bad TN panel it came with. I’m pretty sure if anyone got that, they would be very happy to use it as their daily drive (if it didn’t look soo beat up). That being said, i was still satisfied with it’s performance as I wiped the disk and installed ubuntu on it. I would really use it if forced to do so.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/images/sh782.jpg&quot; /&gt;
+&lt;em&gt;note: I got a black one&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;The scary part came when I was in school one day using it. I laid my hand on the left palm rest, and lo and behold, it rebooted. This led me to believe that this laptop was given up primarily for this reason. It soon became very consistent and really annoyed me. Not only that, i actually felt a small shock at the palm rest resembling static, making me very paranoid of using it ever since.&lt;/p&gt;
+
+&lt;p&gt;All these led me to believe the device was past it’s lifespan. So I was forced to use my trusty acer nitro V while I searched for another device.&lt;/p&gt;
+
+&lt;h1 id=&quot;is-this-love-at-first-sight&quot;&gt;Is this love at first sight?&lt;/h1&gt;
+
+&lt;p&gt;This was when I thought to myself an IBM that I used when I was a kid. My father actually brought it back when I was a kid for me to use instead of my main desktop to discourage me from playing games (which failed cuz I got a bad addiction to flash games instead). That was when I realized the reason I wasn’t satisfied with any of the laptops I got was because I was basing my standards on that laptop.&lt;/p&gt;
+
+&lt;p&gt;Albeit the laptop wasn’t the fastest, it really nailed it for me in terms of media consumption, and typing and flash games played no problems! Sure, having the most recent processor makes it more power efficient, faster, sleeker etc, but it just doesn’t feel like a laptop to me. That was when codingIndex introduced me to the world of Thinkpads, where he not only showed me how cheap they could be, but also how capable they could be compared to today’s standards.&lt;/p&gt;
+
+&lt;p&gt;As per his blog, he got a very capable 8Gb RAM, 2nd gen i5 processor, 128 SSD refurbrished model. Only problem was Computrace, where he had to literally wait for 24 hours before it was disabled!&lt;/p&gt;
+
+&lt;p&gt;After taking a look at his device in person, I was really impressed. Not only was the keyboard inviting to type on, but the display despite not being IPS, was decent enough to do work on. Boot times were amazing with the SSD. However, I was not really convinced at that time, believe it or not.&lt;/p&gt;
+
+&lt;p&gt;It went off my mind for a while. It wasn’t until one day I was in my school’s lab whereby I actually forgot my brick for my Acer Nitro V, I was forced to do my asignment on the school laptop. After typing on it more and more, I found that I got more and more attached to it. Before I left, I checked the model of the laptop and sure enough, it was a Thinkpad, but it had a prefix that I wasn’t familiar with “T” instead of the “X” codingIndex showed me. This puzzled me. What do they mean?&lt;/p&gt;
+
+&lt;h1 id=&quot;the-journey-to-thinkpads&quot;&gt;The journey to Thinkpads?&lt;/h1&gt;
+
+&lt;p&gt;Jolly well, let’s just buy an X220 online! What could go wrong?&lt;/p&gt;
+
+&lt;p&gt;That was what I believe a lot of people would do. But I am a strong advocate of doing research on your own and re-evaluating what you truly need.&lt;/p&gt;
+
+&lt;p&gt;I looked through all the models available, from old to new. To summarize:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;old models had fantastic keyboards&lt;/li&gt;
+  &lt;li&gt;all/most model support big battery sizes&lt;/li&gt;
+  &lt;li&gt;prefixes indicate size/used cases for laptops (X/T/W)&lt;/li&gt;
+  &lt;li&gt;prefixes other than those listed above do not have sturdy exterior&lt;/li&gt;
+  &lt;li&gt;the 20 series of laptops (X220, T420 etc) are the last laptops with the old keyboard exterior&lt;/li&gt;
+  &lt;li&gt;30 series maintained the keystrokes but changed the caps to our current chick lit style&lt;/li&gt;
+  &lt;li&gt;older than the 220 series only support Intel Core Duo or lower CPUs, and support less RAM&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Pricing wise, I followed this guide: &lt;a href=&quot;https://www.truefla.me/free-stuff/used-thinkpad-buyers-guide&quot;&gt;https://www.truefla.me/free-stuff/used-thinkpad-buyers-guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After all my research, I concluded I would get a Thinkpad that was 200SGD or less with 8GB RAM and i5 processor with an SSD. This fit well into my budget. My choices quickly limited to:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;T420&lt;/li&gt;
+  &lt;li&gt;T430&lt;/li&gt;
+  &lt;li&gt;X220&lt;/li&gt;
+  &lt;li&gt;X230&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If I were in the US, I believe I’d jumped onto Craigslist or ebay, then find the best deal, meet up with the seller and buy the item after physically inspecting it. Since I was in Singapore, the only platform that was similar was Carousell. I decided to look there and after a few months of snooping around most thinkpad listings (think I went through at least 600+ listings), I found a used thinkpad x220 series with negotiable price.&lt;/p&gt;
+
+&lt;p&gt;I offered 100SGD to buy his Thinkpad X220 with 4GB, 320 GB HDD an 2nd Gen i5 processor. We met up and the deal went very smoothly. I refered to codingIndex’s blog to ensure Intel AT was disabled (not permanantly as it could increase resale value one day) and more importantly, Computrace. Upon checking, I was plesantly surprised that on my unit, Computrace can be manually disabled. other than some annoying stickers, a small chip at the left palm rest, a faulty left click that came with the keyboard, and an iconic Indian scent (no offense sorry!), I was pretty satisfied with the device!&lt;/p&gt;
+
+&lt;p&gt;My next step was to remove the sticker on the device, clean the device physically, then upgrade the device with more RAM and an SSD.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-hard-was-it&quot;&gt;How hard was it?&lt;/h1&gt;
+
+&lt;p&gt;Stupidly enough, i did not take a picture of the before and after cleaning the laptop. However, here’s how it looked like on the listing:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/images/before-cleaning.jpg&quot; /&gt;
+&lt;em&gt;Before Cleaning X220 &lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I bought some general LCD panel cleaning tools to clean everything except the electronics. I also bought a compressed air blower to clean the fans.&lt;/p&gt;
+
+&lt;p&gt;I managed to remove the stickers, but not so much the residuals. Sad but I think I did the best I could. I gave the fan a good blow with compressed air, now they’re very clean! I also gave the screen and other aspects of the laptop a good clean and I was very pleased with the result!&lt;/p&gt;
+
+&lt;p&gt;I purposely omited the whole process of scrubbing and scuffing at how bad the sticker was than what I anticipated but hey, that’s what you get for paying for 100SGD. The whole device was now very vert inviting to use!&lt;/p&gt;
+
+&lt;h1 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h1&gt;
+
+&lt;p&gt;This was actually where I was most worried of. I wanted to give this laptop at around 50SGD upgrade to an 8GB RAM and 128GB SSD. It is virtually impossible as according to my calculations it will take around 100 dollars for 2 sticks of 4GB RAM and the cheapest SSD. I decided to give my local shops a shot (I live in Malaysia btw). I went back to Malaysia, and found a super cool shop that sells some SSDs. The shop owner asked me to check what type od SSD I needed, most people just use SATA so she suggested I get that. However, since the hard disk had a Windows 7, I decided against purging it for now. I hence decided to just use the WWAN slot in the X220, which accepts mSATA instead. I bought a 120GB mSATA SSD as my boot drive with POP! OS installed.&lt;/p&gt;
+
+&lt;p&gt;Next is the more troublesome RAM. RAM nowadays are really expensive. Lucky for me, the Lifebook S Series has a 4GB stick which I can use. However, I recalled that my previous laptop (Before Acer Nitro V) had 8GB of RAM, so I decided to check it out. Lo and behold it did! So I took the RAM from that computer and speced out my Thinkpad!&lt;/p&gt;
+
+&lt;p&gt;Rejoice! Specs wise this laptop is pretty top notch! I plan to buy a hard disk drive for this system one day/purge the current system.&lt;/p&gt;
+
+&lt;p&gt;Funny enough, my decision of not purging the hard drive came in handy when I needed to update the BIOS. It was very easy and I didn’t need any weird hacky method to do so.&lt;/p&gt;
+
+&lt;h1 id=&quot;finally&quot;&gt;Finally?&lt;/h1&gt;
+
+&lt;p&gt;Yes, with that, I’m proud to say that this laptop is ready for daily use!!! I will be using this laptop more often and am planning to make my Nitro V a home server of some sort, or resell it for some cash before I study my degree. Anyways, I do have plans for it hehehe.&lt;/p&gt;
+
+&lt;p&gt;The final thing I wanted to do was to have an external monitor. I have a TV screen at home which I use to boost my productivity and have better posture when using my laptop. If I could, I would bring that laptop around all day, every day. Sadly, it simply is just too big to do so (duh!)
+so my quest in searching an external monitor begins!&lt;/p&gt;
+
+&lt;h1 id=&quot;external-monitor&quot;&gt;External Monitor&lt;/h1&gt;
+
+&lt;p&gt;I was inspired by my Gigabyte Teamate Lee Weijuin when he showed me his external monitor. After looking at a video by Great Scott, I knew I had to get my hands on one somehow.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;a href=&quot;https://www.youtube.com/embed/6SOXMDb4cjI&quot;&gt;
+  &lt;img src=&quot;http://img.youtube.com/vi/6SOXMDb4cjI/0.jpg&quot; title=&quot;External Monitor!&quot; /&gt;
+&lt;/a&gt;
+&lt;em&gt;External Monitor tutorial by GreatScott!&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I also checked out my mentor Mr Teo Shin Jen’s instructables guide on how to repurpose a dead laptop’s screen and find that his method truly is the path of least resistance. Link here: &lt;a href=&quot;https://www.instructables.com/id/How-to-Re-purpose-dead-laptops-LCD/&quot;&gt;https://www.instructables.com/id/How-to-Re-purpose-dead-laptops-LCD/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It is not uncommon for people to market their laptop as old and want to dispose it, and since I didn’t mind what screen quality it was (yet!), I figured any old laptop with a screen would fit the purpose well. I went on to buy an old Dell Inspiron 1420 which cost me 20SGD (without HDD and RAM) and repurposed it’s LCD screen. Next, I bought the correct LCD screen controller which cost me 60SGD (hehehexD) to control the screen itself as a proof of concept.&lt;/p&gt;
+
+&lt;p&gt;After a long wait, I tested the screen with the controller, and to my surprise it worked out of the box. Rejoice!&lt;/p&gt;
+
+&lt;h1 id=&quot;1--1-is-not-always-just-2&quot;&gt;1 + 1 is not always just 2&lt;/h1&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/images/thinkpad-with-screens.png&quot; /&gt;
+&lt;em&gt; Tada! Thinkpad with external monitor!&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;With my simple and cheapo combo, I have a dual monitor, awesome keyboard and fast boot time setup. This is really all I need to be truly productive as anything power hungry can be done in the cloud if so needed. This setup helped me finish this blog way faster than I could with my TV screen and Nitro V due to the similar screen size, inviting keyboard, and less multitasking required. Task that I used to need to split screen can be done in 2 screens which is the best feeling ever! I am still evaluating the setup to see whether this setup really is just a laptop and a screen or will it bring more benefits that maybe I have yet to discover. Regardless, here is the price breakdown:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Thinkpad: 100 SGD&lt;/li&gt;
+  &lt;li&gt;RAM: Free&lt;/li&gt;
+  &lt;li&gt;Screen: 20 SGD + 60 SGD&lt;/li&gt;
+  &lt;li&gt;mSATA SSD: 60 SGD&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Total: 240 SGD&lt;/p&gt;
+
+&lt;p&gt;This setup took less than 240 Singapore Dollars given you have the proper power supply and VGA cable. With this price one could usually only get a Thinkpad X220 with 8GB RAM and 240 SATA SSD (not m) refurbrished.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;All in all, I think this experiment/setup is a good exposure to what is possible in terms of setups. In the past I would be very scared of spending a dime on tech as I had the misconception that the best is always what I need and the best is always the newest and since the newest always changes, the need to wait for tech to stabilize is mandatory. Although a strong arguement, the hardware within doesn’t improve productivity as a coder, but the will to improve oneself does. Although the journey was tough, it sure was an interesting one.&lt;/p&gt;</content><author><name></name></author><summary type="html">Preface Hello guys! As a tech enthusiast, finding the best tech has always been my dream. However, due to the lack of proper fundings I do have access to the latest RTX graphics cards, macbooks, high end builds etc. So, I decided to turn my sight to a different niche for the time being, which is “how do I get the most out of my money to make my best developer’s setup?”</summary></entry><entry><title type="html">NVIDIA Jetson Nano: Power Issues</title><link href="/2019/07/21/Jetson-Nano-Power-Issue/" rel="alternate" type="text/html" title="NVIDIA Jetson Nano: Power Issues" /><published>2019-07-21T00:00:00+00:00</published><updated>2019-07-21T00:00:00+00:00</updated><id>/2019/07/21/Jetson-Nano-Power-Issue</id><content type="html" xml:base="/2019/07/21/Jetson-Nano-Power-Issue/">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;/h1&gt;
+&lt;p&gt;In today’s day and age, there is a lot of untapped potential for robots, such as wayguiding, security patrol, greeting customers etc. These applications make use of Machine Learning, particularly using it for Edge Detection due to low latency, carrying out tasks such as facial recognition, NLP, navigation in unfamiliar places etc. I looked at a lot of options, one that really stuck to me was creating an AGV using the Jetson Nano.&lt;/p&gt;
+
+&lt;p&gt;The Jetson Nano is a very powerful board with the ARM A-52 Quad Core Processor, 4GB DDR4 Memory, and 128CUDA cores Maxwell Architecture GPU. And it only costs USD99! For a form factor that is this small, with dedicated graphics, this development board is truly a steal. After shipping and custom taxes, the overall cost bumped up to SGD200+ (&lt;i&gt; ouch &lt;/i&gt;). Just when I thought development can commence immediately, the true battle for &lt;i&gt;Power&lt;/i&gt; was just about to happen (pun intended).&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/images/JetsonNano.jpg&quot; /&gt;
+&lt;em&gt;Jetson Nano&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;h1 id=&quot;the-problem-part-1&quot;&gt;The Problem Part 1&lt;/h1&gt;
+&lt;p&gt;The NVIDIA Jetson Nano, due to it’s powerful components, sadly consumes more power than say a Raspberry pi. I first received this board 19th June 2019, and was pleased with all the powering options I had. There was a micro USB on board, a barrel slot which supported 5V 4A, and 2 power input pins, each taking up to a maximum of 3A at 5V.&lt;/p&gt;
+
+&lt;p&gt;I followed the Jetson Nano’s getting started guide, flashed the jetson Nano image with Etcher, plugged it in the SD card slot, powered it up, and it shuts down again by itself. I went on to troubleshoot the image but due to my lack of knowledge in this regard, to no avail. Later, I requested help from a (friend of mine)[codingIndex.xyz] to troubleshoot with me, and believe it or not, the Jetson Nano did not show signs of failed botting, but instead booted without any problems at all. This made me very confused, as it seems that this problem really didn’t exist at all. How do I replicate it? I went back home, powered the Jetson Nano, and it booted without any issues agian! Go figure!&lt;/p&gt;
+
+&lt;h1 id=&quot;the-problem-part-2&quot;&gt;The Problem Part 2&lt;/h1&gt;
+&lt;p&gt;After almost a month’s time of shoving the Jetson Nano into the racks due school and other commitments, I decided to revisit it and start on creating the AGV. So I booted it and to my surprise, the problem presented itself again. I plugged in the micro-USB cable, saw the LED indicator light up, then it dimmed down again. There are videos documenting this exact process on youtube, so I was sure this isn’t a one-off event.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=hV6Znadax-Q&quot;&gt;
+  &lt;img src=&quot;http://img.youtube.com/vi/hV6Znadax-Q/0.jpg&quot; title=&quot;Boot Problems&quot; /&gt;
+&lt;/a&gt;
+&lt;em&gt;Booting issues faced by netizens&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Seeing this made me really think what the board is doing. I remember encountering this in a previous school project, whereby an MP3 player kept on restarting itself in a specific section of the MP3 file. I dug around and looked at the max current of MP3 player and microcontrollers used, I found out that the MP3 player is drawing more current than I expected, exceeding the rated output of the microcontroller itself, causing what is called a “Brown-out” of the microcontroller. Similarly, I suspect the Jetson Nano took more than 5V2A, albeit the Jetson Nano didn’t restart itself, possibly due to safety reasons. Sure enough, just by supplying a little more current directly to the GPIO pins, common grounding the 2 supplies, I finally saw the Jetson Nano Boot Screen.&lt;/p&gt;
+
+&lt;h1 id=&quot;ghetto-solution-dual-power-supply&quot;&gt;Ghetto Solution: Dual power supply?&lt;/h1&gt;
+&lt;p&gt;With this suspicion in mind, I decided to supply just more current to it. I have this multi-USB socket plug, rated to support up to 4.4A autoMax, meaning it can supply a total of 4.4A total to the 4 USB sockets. Sadly, it couldn’t have a maximum of 4.4A at only one socket but hey it’s better than nothing. Hence, my solution is to plug 2 USB, one of them will still be a general micro USB, while the other will be just connected to input GPIO pins. I will definitely be looking in to more permanent solutions in the future.&lt;/p&gt;
+
+&lt;p&gt;Below are the tools I used:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2x MicroUSB cables&lt;/li&gt;
+  &lt;li&gt;electrical tape&lt;/li&gt;
+  &lt;li&gt;Male-To-Female Jumpers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I have procured the items at Pit Money in JCube, Singapore. This is a pretty simple modification of the MicroUSB cable, just cut off the MircoUSB side, find the power cables (usually red and black), then solder on the jumpers, insulate the cables individually, verify the terminals have a 5V potential difference, finally tidy it up.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/images/WireFull.jpg&quot; /&gt;
+&lt;em&gt; view of full wire&lt;/em&gt;
+&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/images/WireJoints.jpg&quot; /&gt;
+&lt;em&gt;view of main modification&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;After the modifications, the Jetson Nano is able to boot consistently! Cheers!&lt;/p&gt;
+
+&lt;h1 id=&quot;permanent-solution-power-mode&quot;&gt;Permanent Solution: Power Mode&lt;/h1&gt;
+
+&lt;p&gt;Following the consistent boot of Jetson Nano, I decided to end this madness once and for all, by setting the power mode to consume less power. (We can’t have a robot stuck by the wall right? That’s called a &lt;i&gt;computer&lt;/i&gt;!) By default, the Jetson Nano draws a nominal 10W. It is possible to change it to consume 5W instead, allowing us to power it using a normal usb cable.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt; “But Bryan, that limits the capability of the Jetson Nano!” &lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok ok, that’s true, but its better than having it sit there and do nothing. Also, I think during the development phases, it is ok to switch between the different power modes. For now, I want to do some setup through the image’s GUI, so attaching my peripherals will definitely cause it to shutdown due to a lack of power. I followed &lt;a href=&quot;https://www.jetsonhacks.com/2019/04/10/jetson-nano-use-more-power/&quot;&gt;this&lt;/a&gt; guide and successfully changed it.&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt; “But Bryan, you can get a 5V3A powerbank!” &lt;/i&gt;&lt;/p&gt;
+
+&lt;s&gt;Shh... No one talk about that.&lt;/s&gt;
+&lt;p&gt;I’ll upgrade the powerbank to a 5V3A one when I make full use of the Jetson Nano’s capabilities. It also takes some modifications to use a barrel jack instead of a MircoUSB.&lt;/p&gt;
+
+&lt;p&gt;And with that, my problem was solved! Now I can power my Jetson Nano from a 5V2A powerbank. Stay tuned for more updates on Jetson Nano!&lt;/p&gt;</content><author><name></name></author><summary type="html">Preface In today’s day and age, there is a lot of untapped potential for robots, such as wayguiding, security patrol, greeting customers etc. These applications make use of Machine Learning, particularly using it for Edge Detection due to low latency, carrying out tasks such as facial recognition, NLP, navigation in unfamiliar places etc. I looked at a lot of options, one that really stuck to me was creating an AGV using the Jetson Nano.</summary></entry><entry><title type="html">Code Extreme Apps 2019: My Leadership Experience</title><link href="/2019/07/15/Code-Extreme-Apps-2019-GigaByte/" rel="alternate" type="text/html" title="Code Extreme Apps 2019: My Leadership Experience" /><published>2019-07-15T00:00:00+00:00</published><updated>2019-07-15T00:00:00+00:00</updated><id>/2019/07/15/Code-Extreme-Apps-2019-GigaByte</id><content type="html" xml:base="/2019/07/15/Code-Extreme-Apps-2019-GigaByte/">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;/h1&gt;
+
+&lt;p&gt;I am Bryan Tee Pak Hong from Singapore Polytechnic. Today, I would like to share my experience in Code Extreme Apps 2019(CXA 2019). The an annual hackathon co-organized by IMDA and iTSC in Singapore. My team consisted of me, &lt;a href=&quot;https://github.com/silvianaho&quot;&gt;Silviana&lt;/a&gt;, and &lt;a href=&quot;https://github.com/weijuinlee&quot;&gt;Lee Weijuin&lt;/a&gt;. The topic for this year is Digital Transformation (DX).&lt;/p&gt;
+
+&lt;p&gt;This is the first time I have broken off from my original team (Team Sudo Coders) whose blogs can be found &lt;a href=&quot;https://codingIndex.xyz&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://geekfile.xyz&quot;&gt;here&lt;/a&gt;, and is the first time I had to officially “lead” a team (more into why I quote this).&lt;/p&gt;
+
+&lt;p&gt;The whole event is split into a few categories:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pre Hackathon&lt;/li&gt;
+  &lt;li&gt;During Hackathon&lt;/li&gt;
+  &lt;li&gt;Before Pitching&lt;/li&gt;
+  &lt;li&gt;After Pitching&lt;/li&gt;
+  &lt;li&gt;Debrief Session&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pre-hackathon&quot;&gt;Pre Hackathon&lt;/h1&gt;
+
+&lt;h2 id=&quot;a-few-months-before-hackathon&quot;&gt;A few months before hackathon&lt;/h2&gt;
+
+&lt;p&gt;When I first heard of the annual event, I was very enthusiastic. However, I have synonymously agreed with one of my previous teammate that it is best we had some leadership experience, hence our original dream team had to be split. I was then requried to recruit my own “dream team”. I have identified that I lacked someone to do the backend of a product and someone to perform some “cool features” to the product. This was when I thought of Silviana, whom I had met during a programming class. Although she was new to not only the programming world, but also Singapore and Hackathons, I find that she has some characteristics to be a backend developer. Next, I needed someone to do cool features. Usually these only take a line or two to “claim” the feature exists so it should be relatively easy. I needed someone that can explain the concepts in the english-est way possible (I become a robot when I need to explain these things at times), which I then identified WeiJuin, who is a great and outspoken person, a good candidate for this task. Hence my team was formed. I am aware that referring people in this regard may be itemizing them, but this is my most honest thought process and I wish whoever reading this can also be as objective when choosing a teammate, cruel or not. It wasn’t my intention to do so however, as I just want a balanced team that can leverage on each others’ strengths and aid in each others’ weaknesses.&lt;/p&gt;
+
+&lt;p&gt;We then managed to brainstorm a few cool ideas with my previous teammate, and validated it amongst ourselves. I will keep the ideas confidential as we may end up using them in future projects.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-few-weeks-before-hackathon&quot;&gt;A few weeks before hackathon&lt;/h2&gt;
+
+&lt;p&gt;The idea that was validated amongst ourselves was bested by an action going around in Singapore called &lt;i&gt;“Belanja A Meal”&lt;/i&gt;, which we find to be much more meaningful to digitize/digitalize. This action basically allows anyone to donate to supported coffee shops using a pay-forward concept to anyone who needs it. For a lack of a better expression, you are giving people in need food before they even request it. The current method is very laborious, using magnets to represent how much food is left for a particular store. You can read more about it &lt;a href=&quot;https://mothership.sg/2018/01/bukit-batok-coffee-shop-belanja-a-meal-project/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, the moment we decided on this topic was T minus one week to hackathon and all of us were panicking.&lt;/p&gt;
+
+&lt;p&gt;This was my first miscalculation: Despite having the traits of a backend person, Silviana loved designing, making her a perfect candidate for front-end development, while WeiJuin, due to his heavy workload (something I can relate to), is more comfortable doing things that he had experience in, somehow it was front-end(?).&lt;/p&gt;
+
+&lt;p&gt;This destroyed my ideal dynamic, but not all hope was lost. I told myself if anyone would have the strength to do the backend of a system, it would be me, as our solution can be “hardware-less”, something I have been doing again and again. So I started learning node.JS at this point of time, attempting to link the webpages together and handle simple data storage, while I delegated both of my teammates to handle the front-end of a product, completely discarding fancy features our web application could have. I simply cannot find any justification to hop on to a previous idea which had way fancier features as practically speaking it would be too much work on the team. Meanwhile, this project, due to its simplistic nature, shouldn’t have fancy features to confuse needy people, and we really didn’t know where to add any special features.&lt;/p&gt;
+
+&lt;p&gt;I stayed up a few nights without sleep to get the basics up and running, and before the hackathon, the server was working as per intended and I felt at ease. All that was left was styling everything, which can be done within 24 hours (imo at least).&lt;/p&gt;
+
+&lt;h1 id=&quot;during-hackathon&quot;&gt;During hackathon&lt;/h1&gt;
+
+&lt;h2 id=&quot;t-24-hours&quot;&gt;T-24 hours&lt;/h2&gt;
+&lt;p&gt;During the hackathon day, we prepared a lot of snacks to keep us awake, while bringing some hardware just in case we had time to prepare any sort of hardware to boost our chances of winning. At the day itself, the twist, a supposed surprise to our project, was introduced. Luckily for us, we mananged to decide which to integrate – it was to gamify our solution. We later distributed the workload pretty well and it was a considerably smooth ride. The front-end was done very well, better than what I hoped for, the backend was working as per intended, what is left is actually displaying the data from the Database to the web interface. The process was harder than expected as this is basically my first time touching JS, but was doable in a couple of hours.&lt;/p&gt;
+
+&lt;h2 id=&quot;t-16-hours&quot;&gt;T-16 hours&lt;/h2&gt;
+&lt;p&gt;It wasn’t until 12 hours into our hackathon we met with our first major problem - the web page for restaurants seem to not make any sense, as they might not even be interested in exploring who or what did something, and we have also forgotten to have a user profile page. At this point, Silviana was too stressed out to create another profile page, which made sense due to the short notice, while WeiJuin decided to help out adding fancy features using hardware, something that I never had thought of. Hence, we had a page linking overhaul here.&lt;/p&gt;
+
+&lt;p&gt;At this point, the stress starts creeping up on me, as the time left is less and less and our current progress is lacking a lot more than what I have planned and provisioned for. This means I had to cut corners in our product in some way. We decided to make the restaurant dashboard into the user profile page and implement a proof-of-concept login and sign up page. A neccessary evil indeed for the benefit of the team.&lt;/p&gt;
+
+&lt;h2 id=&quot;t-12-hours&quot;&gt;T-12 hours&lt;/h2&gt;
+
+&lt;p&gt;At this point, me and Silviana had been awake for more than 24 hours (a few restless nights and early classes on hackathon day), while WeiJuin had been taking a nap to sharpen his sword early, ensuring a tip-top performance early in the morning. We were around 75% done with the web-app and decided to take a quick breakfast break. This was when both of us sort of broke down as we not only feel the fatigue due to the aftermath of &lt;strong&gt;coffee&lt;/strong&gt;, but also the stress on our shoulders. We decided to extend this break to 3 hours just to catch our breath. A good idea in hindsight to improve performance later on.&lt;/p&gt;
+
+&lt;h2 id=&quot;t-9-hours&quot;&gt;T-9 hours&lt;/h2&gt;
+
+&lt;p&gt;Back to work, time is ticking! All of us are awake at this point for the better or for the worse. Although the planning was to finish it by this time, I feel like our product can be completed within the time limit. All of us just needed a different working environment, so we decided to sneak into emptier rooms. It worked out well for us as we were more focused and less stress.&lt;/p&gt;
+
+&lt;h2 id=&quot;t-3-hours&quot;&gt;T-3 hours&lt;/h2&gt;
+
+&lt;p&gt;Goodness gracious, our work was complete. We started to discuss a little bit on the pitch.&lt;/p&gt;
+
+&lt;p&gt;Lucky for us, the hardware was working! Me and Weijuin worked on sending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; request to the server and it worked as per expected!&lt;/p&gt;
+
+&lt;p&gt;Hang on a second, is that a non-operational button! GGWP. I went back to work. Silviana helped me styled some of the dynamic webpages as well, so we had no choice but to let WeiJuin handle the presentation powerpoints. I still felt very bad as we could easily chose not to show this particular feature as after the last 3 hours, the button still couldn’t work. To disclose some details, the button was dynamically generated and allowed a person to choose between 2 options, donating at a normal rate and donating at a discounted rate. The selection of the radio button, which was also dynamically generated, was then appended to another dynamically generated invisible form, which is sent to the server as a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; request. What I should’ve done is to make multiple forms that was supposed to be dynamically generated static instead, so that I have one less level of dynamic elements checking to generate the moment the button is pressed.&lt;/p&gt;
+
+&lt;p&gt;With that being said, everything else was working well and we have a 95% completed checkpoint, one that is good enough for pitching.&lt;/p&gt;
+
+&lt;p&gt;Below is a demonstration of the web interface:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=ym8EqnRknBY&quot;&gt;
+  &lt;img src=&quot;http://img.youtube.com/vi/ym8EqnRknBY/0.jpg&quot; title=&quot;BelanjaOne&quot; /&gt;
+&lt;/a&gt;
+&lt;em&gt;Demo of BelanjaOne&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;h1 id=&quot;before-pitching&quot;&gt;Before pitching&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Critical&lt;/strong&gt; : Something that we didn’t do was rehearse how the web page was supposed to flow, and generating a script individually for the inexperienced Silviana was too much work for her. Me and WeiJuin decided to always go back to the basics and core of our product: Save food by pre-emptively reserving food to those in need, while being altruistic with our product. The pitch went as expected and we not only answered the Q&amp;amp;A flawlessly, we managed to get our ideas to the judges and they were quite impressed!&lt;/p&gt;
+
+&lt;h1 id=&quot;after-pitching&quot;&gt;After pitching&lt;/h1&gt;
+
+&lt;p&gt;As we were one of the first teams to present, we decided to exit the venue, do a quick debrief, then re-enter the venue. We came to a consensus that we have conveyed most, if not all of our core ideas and demonstrated the user interaction with web application, as well as its functionality aspect quite well. Then, we re-entered the room to listen what other teams had come up with. Two other teams actually had a way longer interview with the judges compared to us, both teams are however from SP, and we were genuinely happy for them!&lt;/p&gt;
+
+&lt;p&gt;Of course, we thought to ourselves, we have done our best, we already stand the most chance in winning given the effort we have put in over the past few days/weeks. In my opinion, we stand a high chance in being one of the 10-11 finalist for CXA 2019.&lt;/p&gt;
+
+&lt;h1 id=&quot;debrief-session&quot;&gt;Debrief Session&lt;/h1&gt;
+
+&lt;p&gt;After the promised results date, sadly we did not receive any announcement on us being selected as a finalist. Even though we did really did our best, luck just wasn’t on our side. An official debrief session with the team has not been made but I do have some ideas what happened in the process:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Our idea was not focused enough in solving food waste, we focused on helping the needy individuals instead of solving food waste&lt;/li&gt;
+  &lt;li&gt;My planning and scouting for teammates was a flop, assigning unsuitable roles for both of my valuable teammates&lt;/li&gt;
+  &lt;li&gt;Overhauling of idea induced way too much stress, handling of it was not well done.&lt;/li&gt;
+  &lt;li&gt;Insufficient preparation time due to a last minute change in idea&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;with just the 4 problems above, the team has failed in being selected, despite the miraculous comeback nearing the end of the hackathon.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;All in all, I feel like there is still a lot of room for improvement in my leadership skills as I not only have failed to identify strengths in individuals early on, but also failed to identify the fundemental flaw in our idea early on, which if I had, we would’ve tried to fix it before the hackathon. However, setting timelines and deadlines, saying at what point is a good enough point to show our target audience, and picking up from where I have fail, I have really tried my best and I am pleased with how the team as a whole performed as a whole.&lt;/p&gt;
+
+&lt;p&gt;Code Extreme Apps 2019 was a really fun experience. Rumor has it that it shall be shut down forever, never to see the light of day ever again. Will it be revamped? Who knows. Nevertheless, congratulations to all the finalists and winners and keep fighting, and all the best for those who participated and put in as much, if not more effort, than our team!&lt;/p&gt;
+
+&lt;p&gt;However, in the future, I hope to work in a team where I like to call a “Self directed team”, a team that understands what the product is and is willing to take up roles automatically and solve problems on their own. In a sense, everyone is a leader in their own domain, where little to no inteference between parties is involved, and everyone is clear what is required to complete the project, automatically complementing each others’ strengths and weaknesses.&lt;/p&gt;
+
+&lt;p&gt;That’s it for today, thanks for taking your time to read this extremely long article. If You read until here you are amazing. Do snoop around my articles and repositories for other fun stuff!&lt;/p&gt;</content><author><name></name></author><summary type="html">Preface</summary></entry><entry><title type="html">What is Reinforcement Learning (RL)</title><link href="/2019/04/23/What-is-Reinforcement-Learing-(RL)/" rel="alternate" type="text/html" title="What is Reinforcement Learning (RL)" /><published>2019-04-23T00:00:00+00:00</published><updated>2019-04-23T00:00:00+00:00</updated><id>/2019/04/23/What-is-Reinforcement-Learing-(RL)</id><content type="html" xml:base="/2019/04/23/What-is-Reinforcement-Learing-(RL)/">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;/h1&gt;
+&lt;p&gt;I am a student studying in Singapore Polytechnic, currently in year 3. I truly enjoy what my course, Diploma in Computer Engineering has to offer. However, I have yet to see a chance to explore some of my ideas I have since I was year one. Over the years of hackathons, projects, and most importantly guidance from mentors and peers, I feel like I know enough to learn RL at my own pace. This blog is to document what I have learnt over a two-week from my school holiday.&lt;/p&gt;
+
+&lt;h2 id=&quot;fundementals&quot;&gt;FUNdementals&lt;/h2&gt;
+&lt;p&gt;To discuss RL in specific terms, it is important to understand the following terminology:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agent&lt;/code&gt; : this is an algorithm in your machine that you train to achieve your goal&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;environment&lt;/code&gt; : this is the place your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agent&lt;/code&gt; interacts with&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state&lt;/code&gt; :  The instantaneous situation the agent finds itself in in relation to other factors.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt; : This is the step that your agent takes upon determining from the multitude of possible steps from a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reward&lt;/code&gt; : A feedback used to measure the success/failure of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agent&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;discount&lt;/code&gt; : As time goes on, we all die. This is why we include the discount factor, to maximize time to live and do not let the “end game” &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt;s affect the early game performance.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;episode&lt;/code&gt; : The session the agent runs from start to finish.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At the core of RL, we want the agent to learn the best actions to achieve a particular outcome through trial and error. There are multiple methods to be discussed but releasing it all in one article just spoils all the fun hehehe. Today we focus more on the technical terms.&lt;/p&gt;
+
+&lt;p&gt;Using the definitions above, we can see how they come together. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agent&lt;/code&gt; is what we have designed. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;environment&lt;/code&gt; is a function/black box that transforms the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agent&lt;/code&gt;’s current &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt; taken into the next &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state&lt;/code&gt; and a feedback(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reward&lt;/code&gt;), while the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agent&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;transforms&lt;/code&gt; the new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reward&lt;/code&gt; into a next &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt;. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agent&lt;/code&gt;’s job is to approximate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;environment&lt;/code&gt;’s function to find the maximum &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reward&lt;/code&gt; it produces after each &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;episode&lt;/code&gt;. A &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;discount&lt;/code&gt; can be added to allow high performance early in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;episode&lt;/code&gt; (and possibly forever!).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RL-flow.png&quot; alt=&quot;RL-flow&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, using the above phenomena, we can observe more phenomenas and they can be expressed mathematically. Hence, let’s also define a few terms:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;policy&lt;/code&gt; : A strategy that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;agent&lt;/code&gt; uses to determine the next &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt; based on the current &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state&lt;/code&gt;. It maps &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state&lt;/code&gt;s to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt;s of highest &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reward&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Q-value&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action-value&lt;/code&gt; : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Q&lt;/code&gt; is a abbreviation for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Quality&lt;/code&gt;. This is the expected long-term return with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;discount&lt;/code&gt;, taking into consideration of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt;. This value maps &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state-action pairs&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rewards&lt;/code&gt;, having a subtle difference with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;policy&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Value&lt;/code&gt; : the overall expected &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reward&lt;/code&gt; in a particular &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;state&lt;/code&gt; until the end of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;episode&lt;/code&gt; following a particular &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;policy&lt;/code&gt; also considering &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;discounts&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hang on, the definition of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Q-value&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Value&lt;/code&gt; are similar. Are they the same?&lt;/p&gt;
+
+&lt;p&gt;Think of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Value&lt;/code&gt; as the label, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Q-value&lt;/code&gt; is the predicted outcome. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;policy&lt;/code&gt; is supposed to be updated. With this statement in mind, we actually have some sort of gradient here we can optimize!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Advantage Function&lt;/code&gt; :The difference between the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Q-value&lt;/code&gt; and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Value&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are all the important terms, I’ll be writing a separate article on model based and model free. Do keep an eye on it!&lt;/p&gt;
+
+&lt;p&gt;That’s it for today! These should be pretty easy to remember right? The following article will closely tie to this article so stay tuned!&lt;/p&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;[https://towardsdatascience.com/the-complete-reinforcement-learning-dictionary-e16230b7d24e]&lt;/li&gt;
+  &lt;li&gt;[https://skymind.ai/wiki/deep-reinforcement-learning#define]&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Preface I am a student studying in Singapore Polytechnic, currently in year 3. I truly enjoy what my course, Diploma in Computer Engineering has to offer. However, I have yet to see a chance to explore some of my ideas I have since I was year one. Over the years of hackathons, projects, and most importantly guidance from mentors and peers, I feel like I know enough to learn RL at my own pace. This blog is to document what I have learnt over a two-week from my school holiday.</summary></entry><entry><title type="html">7 Steps to Image Classification with AI</title><link href="/2019/03/31/7-steps-to-Image-Classification-with-AI/" rel="alternate" type="text/html" title="7 Steps to Image Classification with AI" /><published>2019-03-31T00:00:00+00:00</published><updated>2019-03-31T00:00:00+00:00</updated><id>/2019/03/31/7-steps-to-Image-Classification-with-AI</id><content type="html" xml:base="/2019/03/31/7-steps-to-Image-Classification-with-AI/">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;/h1&gt;
+&lt;p&gt;Hello guys, Around 1 year ago, I have been to a talk by YuFeng Guo in Singapore. I have documented his talk in another blog post of different domain but I wish to revise my thoughts after 1 year of digestion.&lt;/p&gt;
+
+&lt;p&gt;Not only that, I have used the same framework in AI, here is my 7 steps to Image Classification with AI.&lt;/p&gt;
+
+&lt;h2 id=&quot;easy-7-steps&quot;&gt;Easy 7 steps&lt;/h2&gt;
+&lt;p&gt;I have found great succes over the course of applying the following 7 steps, so here they are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Gathering Data&lt;/li&gt;
+  &lt;li&gt;Preparing that Data&lt;/li&gt;
+  &lt;li&gt;Choosing a Model&lt;/li&gt;
+  &lt;li&gt;Training&lt;/li&gt;
+  &lt;li&gt;Evaluation&lt;/li&gt;
+  &lt;li&gt;Hyperparameter Tuning&lt;/li&gt;
+  &lt;li&gt;Prediction&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;step-1-gather-data&quot;&gt;Step 1. Gather Data&lt;/h3&gt;
+&lt;p&gt;Gathering data is easy right? Well, maybe. Sometimes, you just have the data you need before you even think of solving the problem, but for AI/ML enthusiasts like us, data is like the new oil, if you get it, sprinkle a little bit of AI, ~ BAM ~, a fresh hot recipe for a startup is brewed. I recommend using a batch downloader and gather your initial training data from the public domain, just to get a proof of concept. Another (even better) way is to check if the problem you have at hand has ever been somewhat involved in an online competiton like Kaggle’s competitions etc.&lt;/p&gt;
+
+&lt;p&gt;Depending on your framework, you may need to save your data in different formats.&lt;/p&gt;
+
+&lt;p&gt;Of course, to make things easier, a format as such will suffice (minimal):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Directory&quot;&gt;Data
+| Images
+| Annotations
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Store all your data in the Images directory&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-preparing-data&quot;&gt;Step 2: Preparing Data&lt;/h3&gt;
+&lt;p&gt;This step mainly focuses on filtering your data and labeling your data. Take a look at all your data, are there duplicates? Are there images that are irrelevant? Are there images with weird file extensions (.gif, .ico, etc.)? Delete them if need be, make sure your data is as clean as possible.&lt;/p&gt;
+
+&lt;p&gt;Congratulations! You’ve passed a big hurdle for training AI models at this point!&lt;/p&gt;
+
+&lt;p&gt;Now, we need to label our precious, clean data. Again, depending on your choice of classification, this may or may not be required.&lt;/p&gt;
+
+&lt;p&gt;This step includes drawing a boundary box over your image data (assuming that’s what you have) and generate an XML file with your image’s classes.&lt;/p&gt;
+
+&lt;p&gt;Also, create a labels.txt that has all your classes in different lines.&lt;/p&gt;
+
+&lt;p&gt;Another topic we discuss here would be a train-test split. A lot of people will tell you different train-test split ratios, but generally a 9:1 to a 10:1 is a good split.&lt;/p&gt;
+
+&lt;p&gt;After this step, congrats! Because you have completed all the boring checklist!&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3-choosing-a-model&quot;&gt;Step 3: Choosing a model&lt;/h3&gt;
+&lt;p&gt;Now, at this step, you may be tempted to just choose one of the many algorithms and see the result. I have tested some of the algorithms and indeed, sometimes due to data incompleteness, characteristics of data etc, the benchmarks documented may be slightly off compared to what you experience, but for scientific reasons I believe looking at the various models is beneficial.&lt;/p&gt;
+
+&lt;p&gt;More details on algorithms and how it compares to other algs here: &lt;a href=&quot;https://pjreddie.com/darknet/yolo/&quot;&gt;darknet supported algoritms&lt;/a&gt; and &lt;a href=&quot;https://medium.com/zylapp/review-of-deep-learning-algorithms-for-image-classification-5fdbca4a05e2&quot;&gt;Other good algorithms&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-4-training&quot;&gt;Step 4: Training&lt;/h3&gt;
+&lt;p&gt;Finally, pass in your training dataset, labels, annotations, model files into your model/framework. The methods of training differes from framework to framework, but generally this step is considered the easiest.&lt;/p&gt;
+
+&lt;p&gt;The AI algorithm will generate layers that contain important features of a class. After this phase the model will be able to recognize objects in images!&lt;/p&gt;
+
+&lt;h3 id=&quot;step-5-evaluation&quot;&gt;Step 5: Evaluation&lt;/h3&gt;
+&lt;p&gt;Evaluation basically means to see how accurate your weights are by benchmarking your model to the test dataset. Your model (ideally) should not overfit nor underfit. Good accuraccies around 95-98% IMO, but may vary according to algorithms, features, and datasets.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of tools for people to choose from, my favorites being &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tensorboard&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mAP&lt;/code&gt;. Theories are explained in a seperate blog post.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-6-hyperparameter-tuning&quot;&gt;Step 6: Hyperparameter Tuning&lt;/h3&gt;
+&lt;p&gt;In Image recognition sense, hyperparameters have a wide range, from augmentation of image to decay rate and learning rate. Upon evaluating the model, you can tune the hyperparameters to improve the performance of your final model, making it converge faster and/or become more accurate. The possibilities are endless, but not for the faint of heart. For beginners, stick to the basic trainings, and tune only if you need to, going back all the way to Step 1 at times just to ge the best model possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-7-prediction&quot;&gt;Step 7: Prediction&lt;/h3&gt;
+&lt;p&gt;Finally we have reached the last step, which is evaluating the model with data the model has not seen before. This moment in my opinion is the most exciting, as we can see how our model performs outside of a controlled environment, and detect any loopholes the model may have, including more edge cases and retrain the model. Thought it may not be entirely neccessary, this is truly where the fun begins, stress testing your model to its limit.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;These are the 7 steps that I usually follow when training my own image classifier, and has brought me success in evaluating my model’s success/failure. Drop me an email if you have any question and I hope this blog post has been of value to you. Thanks&lt;/p&gt;</content><author><name></name></author><summary type="html">Preface Hello guys, Around 1 year ago, I have been to a talk by YuFeng Guo in Singapore. I have documented his talk in another blog post of different domain but I wish to revise my thoughts after 1 year of digestion.</summary></entry><entry><title type="html">How to use darkflow with Intel Movidius Neural Compute Stick</title><link href="/2019/03/31/How-to-use-darkflow-with-Intel-Movidius-Neural-Compute-Stick/" rel="alternate" type="text/html" title="How to use darkflow with Intel Movidius Neural Compute Stick" /><published>2019-03-31T00:00:00+00:00</published><updated>2019-03-31T00:00:00+00:00</updated><id>/2019/03/31/How-to-use-darkflow-with-Intel-Movidius-Neural-Compute-Stick</id><content type="html" xml:base="/2019/03/31/How-to-use-darkflow-with-Intel-Movidius-Neural-Compute-Stick/">&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following tutorial explains how to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkflow&lt;/code&gt; framework, which is a tensorflow implementation, and integrate it with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Intel Movidius Neural Compute Stick&lt;/code&gt;. This tutorial has been tested on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu 16.04LTS&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CUDA9.0&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CUDNN8.0&lt;/code&gt;, and assumes you already have them installed.&lt;/p&gt;
+
+&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;/h1&gt;
+&lt;p&gt;It has come to my attention that edge image classification is highly under-discussed. This could be due to the lack of large community at the moment, or maybe frameworks are not optimized for edge computing. In the official documentation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NCSDK API&lt;/code&gt;, the 2 most used frameworks are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;caffe&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt;, which inspired me to use my knowledge on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt; to check out &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkflow&lt;/code&gt;. However, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Intel Movidius Neural Compute Stick&lt;/code&gt; is rarely used together with the said framework. Hence I began on my journey scouring the web and all documentations I can find to get &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkflow&lt;/code&gt; to work on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Intel Movidius Neural Compute Stick&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Although &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;caffe&lt;/code&gt; is a very powerful framework, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt; provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darknet&lt;/code&gt;, a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C/C++&lt;/code&gt; implemented framework for yolov2 model, hence I was curious to see what &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkflow&lt;/code&gt;, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tensorflow&lt;/code&gt; implementation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darknet&lt;/code&gt;, has in store. FUrthermore, I have found that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;caffe&lt;/code&gt;’s method of labeling and improving training speed to be confusing, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkflow&lt;/code&gt; however is faster to market as labeling is simpler, training is straightforward, and produces good results.&lt;/p&gt;
+
+&lt;p&gt;With that being said, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at &lt;a href=&quot;https://www.modelconverge.xyz&quot;&gt;modelconverege.xyz&lt;/a&gt;, I would like to show you my research results and steps required for proper training.&lt;/p&gt;
+
+&lt;p&gt;Note this blogpost is not for beginners. Check out my blog for &lt;a href=&quot;https://modelconverge.xyz/2019/03/31/7-steps-to-Image-Classification-with-AI/&quot;&gt;7 steps to Image Classification with AI&lt;/a&gt; for the basic idea of the steps I follow.&lt;/p&gt;
+
+&lt;p&gt;The aim of this tutorial is just to setup darkflow, setup &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NCSDK2&lt;/code&gt; and compile a graph file that is intepretable by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Intel Movidius Neural Compute Stick&lt;/code&gt;, and read the output, ending off with an exmaple.&lt;/p&gt;
+
+&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+&lt;p&gt;Clone the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkflow&lt;/code&gt; repository:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/thtrieu/darkflow
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Please see the official docs for training steps, but for TLDR:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;get training data&lt;/li&gt;
+  &lt;li&gt;use a labeling image tool to label your images in xml format, link &lt;a href=&quot;https://github.com/tzutalin/labelImg&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;generate your labels in .txt file&lt;/li&gt;
+  &lt;li&gt;edit cfg file (eg, filter and classes in yolov2 model)&lt;/li&gt;
+  &lt;li&gt;pass the above to darkflow with the following command&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;VALUE &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0.0 to 1.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;amount of GPU used&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+./flow &lt;span class=&quot;nt&quot;&gt;--labels&lt;/span&gt; labels.txt &lt;span class=&quot;nt&quot;&gt;--model&lt;/span&gt; model.cfg &lt;span class=&quot;nt&quot;&gt;--dataset&lt;/span&gt; /path/to/dataset &lt;span class=&quot;nt&quot;&gt;--annotations&lt;/span&gt; /path/to/xml/annotations &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;--train&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--trainer&lt;/span&gt; YOUR_PREFERENCE &lt;span class=&quot;nt&quot;&gt;--batch&lt;/span&gt; size BATCH_SIZE &lt;span class=&quot;nt&quot;&gt;--gpu&lt;/span&gt; VALUE &lt;span class=&quot;nt&quot;&gt;--load&lt;/span&gt; YOUR_CHECKPOINT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After your training, you should see .meta files and .pb files in ckpt directory of darkflow. These are graph files compatible with Tensorflow, but not with NCSDK2.&lt;/p&gt;
+
+&lt;p&gt;Generate the frozen pb file with the following command:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./flow &lt;span class=&quot;nt&quot;&gt;--model&lt;/span&gt; /path/to/cfg &lt;span class=&quot;nt&quot;&gt;--load&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;your tensorflow weights&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--savepb&lt;/span&gt; /path/to/output
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, clone the following 2 repositories: yolo-darkflow-movidius &amp;amp; NCSDK2.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/SpdPnd98/yolo-darkflow-movidius.git
+git clone t clone &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; ncsdk2 http://github.com/Movidius/ncsdk &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;ncsdk &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-b ncsdk2&lt;/code&gt; to clone NCSDK2, you can clone NCSDK, but will need to make modifications according to this &lt;a href=&quot;https://movidius.github.io/ncsdk/ncapi/python_api_migration.html&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;if you have caffe installed, comment out the path to your caffe directory, as ncsdk examples depend on and comes with a caffe installation. ncsdk2 also uninstalls any installation of OpenCV. If you however wish to ignore their examples, feel free to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make api&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make&lt;/code&gt;, as we will show below.&lt;/p&gt;
+
+&lt;p&gt;Editing the cfg file follows the same format for darknet, please read the documentation &lt;a href=&quot;https://pjreddie.com/darknet/yolo/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;preparing-for-intel-movidius-neural-compute-stick&quot;&gt;Preparing for Intel Movidius Neural Compute Stick&lt;/h1&gt;
+&lt;p&gt;The command to convert the graph file output to a graph file that complies to Intel Movidius Stick is the command below:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvNCCompile -s 12 /path/to/graph.pb&lt;/code&gt;
+please refer &lt;a href=&quot;https://movidius.github.io/ncsdk/tools/compile.html&quot;&gt;here&lt;/a&gt; for more arguments.&lt;/p&gt;
+
+&lt;p&gt;the -s argument indicates the amount of SHAVES used. SHAVES is analogous to core counts, max is 12 SHAVES. Read &lt;a href=&quot;https://movidius.github.io/ncsdk/ncs.html&quot;&gt;here&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;Next, we need to create a symbolic link in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yolo-darkflow-movidius&lt;/code&gt; directory:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;yolo-darkflow-movidius/
+pip &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--upgrade&lt;/span&gt; cython
+
+&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; ../darkflow/darkflow darkflow
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;At this point, preparations are all done!&lt;/p&gt;
+
+&lt;h1 id=&quot;example-on-pclaptop&quot;&gt;Example on PC/Laptop&lt;/h1&gt;
+
+&lt;p&gt;To demonstrate an example, run the following commands to prepare:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../darkflow
+wget &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; tiny-yolo-voc.cfg https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov2-tiny-voc.cfg
+wget &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; tiny-yolo-voc.weights https://pjreddie.com/media/files/yolov2-tiny-voc.weights
+
+python3 ./flow &lt;span class=&quot;nt&quot;&gt;--model&lt;/span&gt; tiny-yolo-voc.cfg &lt;span class=&quot;nt&quot;&gt;--load&lt;/span&gt; tiny-yolo-voc.weights &lt;span class=&quot;nt&quot;&gt;--savepb&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../yolo-darkflow-movidius
+&lt;span class=&quot;nb&quot;&gt;mv  &lt;/span&gt;darkflow/built_graph/
+mvNCCompile built_graph/tiny-yolo-voc.pb &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; 12 &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; input &lt;span class=&quot;nt&quot;&gt;-on&lt;/span&gt; output &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; built_graph/tiny-yolo-voc.graph 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, run this to see the result, with your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Intel Movidius Neural Compute Stick&lt;/code&gt; plugged in:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 test_movidius.py &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; video.avi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Congrats, you have succesfully run a TinyYOLO model on movidius stick! Expect similar results when exporting them to the edge!&lt;/p&gt;
+
+&lt;h1 id=&quot;edge-example&quot;&gt;Edge example&lt;/h1&gt;
+
+&lt;p&gt;Grab a coffee and something to do because the procedures are largely the same, but taking a lot longer in an environment like raspberry pi or other device. Do note to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make api&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make&lt;/code&gt; when building ncsdk2.&lt;/p&gt;
+
+&lt;p&gt;This time, you do not need to train a model, but just import a model like the example above.&lt;/p&gt;
+
+&lt;p&gt;Hope this blog post has been of help. Drop me an email if you have any questions. Thanks.&lt;/p&gt;</content><author><name></name></author><summary type="html">Note: The following tutorial explains how to use darkflow framework, which is a tensorflow implementation, and integrate it with Intel Movidius Neural Compute Stick. This tutorial has been tested on Ubuntu 16.04LTS, CUDA9.0 and CUDNN8.0, and assumes you already have them installed.</summary></entry></feed>
