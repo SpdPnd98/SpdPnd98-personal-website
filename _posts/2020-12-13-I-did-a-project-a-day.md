@@ -13,15 +13,15 @@ I tried to study really hard, but touch wood I think I barely passed for some mo
 A small voice in me said <i>"Not enough time?!?! Tis so easy I can code it in 10 minutes!"</i> At the time, I did have a few mini projects in mind that are easy to complete. But there were some that had to take longer than usual as well!
 
 # Inspiration
-I came across this youtube channel by (Zack Freedman)[https://www.youtube.com/user/ZackFreedman?app=desktop], and was inspired by his Among us IRL video, where he made various among us props within the span of a week. Sure, they were not perfect, but they were completed and function as per intended!
+I came across this youtube channel by [Zack Freedman](https://www.youtube.com/user/ZackFreedman?app=desktop), and was inspired by his Among us IRL video, where he made various among us props within the span of a week. Sure, they were not perfect, but they were completed and function as per intended!
 
-Also, the channel Unus Annus really hit me when they actually deleted a channel with millions of subscribers. Check out (Markiplier)[https://www.youtube.com/watch?v=jm7ZAMAsPxI] channel for his thoughts on Unus Annus. I could relate to the experience when I left my high school, but never to the fullest extent due to me having so much regrets.
+Also, the channel Unus Annus really hit me when they actually deleted a channel with millions of subscribers. Check out [Markiplier](https://www.youtube.com/watch?v=jm7ZAMAsPxI) channel for his thoughts on Unus Annus. I could relate to the experience when I left my high school, but never to the fullest extent due to me having so much regrets.
 
 I wanted a change.
 
 Since I was in my winter break, I thought why not do a project a day and challenge my boundaries?
 
-You can see my Journey on Instagram: [https://www.instagram.com/modelconverge/]
+You can see my Journey on Instagram: [https://www.instagram.com/modelconverge/](https://www.instagram.com/modelconverge/)
 
 ## Day 1, 27th November 2020
 I focused on getting my old Jetson Nano tank up and running again. I didn't make a blog post about it as it was too infantile to be called a masterpiece (which I still plan to make it my magnum opus). However, too big of a project will just be a white elephant. So I started to get it running. For some reason, the tank tracks were catching on the battery holder, which I still didn't know what is causing it till this day.
