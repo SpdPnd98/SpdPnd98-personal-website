@@ -84,21 +84,21 @@
       
   
   <div class="article">
-    <p><strong>Note:</strong> The following tutorial explains how to use <code class="highlighter-rouge">darkflow</code> framework, which is a tensorflow implementation, and integrate it with <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code>. This tutorial has been tested on <code class="highlighter-rouge">Ubuntu 16.04LTS</code>, <code class="highlighter-rouge">CUDA9.0</code> and <code class="highlighter-rouge">CUDNN8.0</code>, and assumes you already have them installed.</p>
+    <p><strong>Note:</strong> The following tutorial explains how to use <code class="language-plaintext highlighter-rouge">darkflow</code> framework, which is a tensorflow implementation, and integrate it with <code class="language-plaintext highlighter-rouge">Intel Movidius Neural Compute Stick</code>. This tutorial has been tested on <code class="language-plaintext highlighter-rouge">Ubuntu 16.04LTS</code>, <code class="language-plaintext highlighter-rouge">CUDA9.0</code> and <code class="language-plaintext highlighter-rouge">CUDNN8.0</code>, and assumes you already have them installed.</p>
 
 <h1 id="preface">Preface</h1>
-<p>It has come to my attention that edge image classification is highly under-discussed. This could be due to the lack of large community at the moment, or maybe frameworks are not optimized for edge computing. In the official documentation of <code class="highlighter-rouge">NCSDK API</code>, the 2 most used frameworks are <code class="highlighter-rouge">caffe</code> and <code class="highlighter-rouge">tensorflow</code>, which inspired me to use my knowledge on <code class="highlighter-rouge">tensorflow</code> to check out <code class="highlighter-rouge">darkflow</code>. However, <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code> is rarely used together with the said framework. Hence I began on my journey scouring the web and all documentations I can find to get <code class="highlighter-rouge">darkflow</code> to work on the <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code>.</p>
+<p>It has come to my attention that edge image classification is highly under-discussed. This could be due to the lack of large community at the moment, or maybe frameworks are not optimized for edge computing. In the official documentation of <code class="language-plaintext highlighter-rouge">NCSDK API</code>, the 2 most used frameworks are <code class="language-plaintext highlighter-rouge">caffe</code> and <code class="language-plaintext highlighter-rouge">tensorflow</code>, which inspired me to use my knowledge on <code class="language-plaintext highlighter-rouge">tensorflow</code> to check out <code class="language-plaintext highlighter-rouge">darkflow</code>. However, <code class="language-plaintext highlighter-rouge">Intel Movidius Neural Compute Stick</code> is rarely used together with the said framework. Hence I began on my journey scouring the web and all documentations I can find to get <code class="language-plaintext highlighter-rouge">darkflow</code> to work on the <code class="language-plaintext highlighter-rouge">Intel Movidius Neural Compute Stick</code>.</p>
 
-<p>Although <code class="highlighter-rouge">caffe</code> is a very powerful framework, and <code class="highlighter-rouge">tensorflow</code> provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with <code class="highlighter-rouge">darknet</code>, a <code class="highlighter-rouge">C/C++</code> implemented framework for yolov2 model, hence I was curious to see what <code class="highlighter-rouge">darkflow</code>, the <code class="highlighter-rouge">tensorflow</code> implementation of <code class="highlighter-rouge">darknet</code>, has in store. FUrthermore, I have found that <code class="highlighter-rouge">caffe</code>’s method of labeling and improving training speed to be confusing, <code class="highlighter-rouge">darkflow</code> however is faster to market as labeling is simpler, training is straightforward, and produces good results.</p>
+<p>Although <code class="language-plaintext highlighter-rouge">caffe</code> is a very powerful framework, and <code class="language-plaintext highlighter-rouge">tensorflow</code> provides a lot of fine tuning and (almost) complete comtrol over models, I have had very great experience with <code class="language-plaintext highlighter-rouge">darknet</code>, a <code class="language-plaintext highlighter-rouge">C/C++</code> implemented framework for yolov2 model, hence I was curious to see what <code class="language-plaintext highlighter-rouge">darkflow</code>, the <code class="language-plaintext highlighter-rouge">tensorflow</code> implementation of <code class="language-plaintext highlighter-rouge">darknet</code>, has in store. FUrthermore, I have found that <code class="language-plaintext highlighter-rouge">caffe</code>’s method of labeling and improving training speed to be confusing, <code class="language-plaintext highlighter-rouge">darkflow</code> however is faster to market as labeling is simpler, training is straightforward, and produces good results.</p>
 
 <p>With that being said, finding proper source code for interpreting the graph file passed into movidius stick is difficult, hence here at <a href="https://www.modelconverge.xyz">modelconverege.xyz</a>, I would like to show you my research results and steps required for proper training.</p>
 
 <p>Note this blogpost is not for beginners. Check out my blog for <a href="https://modelconverge.xyz/2019/03/31/7-steps-to-Image-Classification-with-AI/">7 steps to Image Classification with AI</a> for the basic idea of the steps I follow.</p>
 
-<p>The aim of this tutorial is just to setup darkflow, setup <code class="highlighter-rouge">NCSDK2</code> and compile a graph file that is intepretable by the <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code>, and read the output, ending off with an exmaple.</p>
+<p>The aim of this tutorial is just to setup darkflow, setup <code class="language-plaintext highlighter-rouge">NCSDK2</code> and compile a graph file that is intepretable by the <code class="language-plaintext highlighter-rouge">Intel Movidius Neural Compute Stick</code>, and read the output, ending off with an exmaple.</p>
 
 <h1 id="setup">Setup</h1>
-<p>Clone the <code class="highlighter-rouge">darkflow</code> repository:</p>
+<p>Clone the <code class="language-plaintext highlighter-rouge">darkflow</code> repository:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/thtrieu/darkflow
 </code></pre></div></div>
@@ -128,20 +128,20 @@
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/SpdPnd98/yolo-darkflow-movidius.git
 git clone t clone <span class="nt">-b</span> ncsdk2 http://github.com/Movidius/ncsdk <span class="o">&amp;&amp;</span> <span class="nb">cd </span>ncsdk <span class="o">&amp;&amp;</span> make <span class="nb">install</span>
 </code></pre></div></div>
-<p>use <code class="highlighter-rouge">-b ncsdk2</code> to clone NCSDK2, you can clone NCSDK, but will need to make modifications according to this <a href="https://movidius.github.io/ncsdk/ncapi/python_api_migration.html">website</a>.</p>
+<p>use <code class="language-plaintext highlighter-rouge">-b ncsdk2</code> to clone NCSDK2, you can clone NCSDK, but will need to make modifications according to this <a href="https://movidius.github.io/ncsdk/ncapi/python_api_migration.html">website</a>.</p>
 
-<p>if you have caffe installed, comment out the path to your caffe directory, as ncsdk examples depend on and comes with a caffe installation. ncsdk2 also uninstalls any installation of OpenCV. If you however wish to ignore their examples, feel free to use <code class="highlighter-rouge">make api</code> instead of <code class="highlighter-rouge">make</code>, as we will show below.</p>
+<p>if you have caffe installed, comment out the path to your caffe directory, as ncsdk examples depend on and comes with a caffe installation. ncsdk2 also uninstalls any installation of OpenCV. If you however wish to ignore their examples, feel free to use <code class="language-plaintext highlighter-rouge">make api</code> instead of <code class="language-plaintext highlighter-rouge">make</code>, as we will show below.</p>
 
 <p>Editing the cfg file follows the same format for darknet, please read the documentation <a href="https://pjreddie.com/darknet/yolo/">here</a>.</p>
 
 <h1 id="preparing-for-intel-movidius-neural-compute-stick">Preparing for Intel Movidius Neural Compute Stick</h1>
 <p>The command to convert the graph file output to a graph file that complies to Intel Movidius Stick is the command below:
-<code class="highlighter-rouge">mvNCCompile -s 12 /path/to/graph.pb</code>
+<code class="language-plaintext highlighter-rouge">mvNCCompile -s 12 /path/to/graph.pb</code>
 please refer <a href="https://movidius.github.io/ncsdk/tools/compile.html">here</a> for more arguments.</p>
 
 <p>the -s argument indicates the amount of SHAVES used. SHAVES is analogous to core counts, max is 12 SHAVES. Read <a href="https://movidius.github.io/ncsdk/ncs.html">here</a> for more details.</p>
 
-<p>Next, we need to create a symbolic link in <code class="highlighter-rouge">yolo-darkflow-movidius</code> directory:</p>
+<p>Next, we need to create a symbolic link in <code class="language-plaintext highlighter-rouge">yolo-darkflow-movidius</code> directory:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>yolo-darkflow-movidius/
 pip <span class="nb">install</span> <span class="nt">--upgrade</span> cython
@@ -164,7 +164,7 @@ python3 ./flow <span class="nt">--model</span> tiny-yolo-voc.cfg <span class="nt
 mvNCCompile built_graph/tiny-yolo-voc.pb <span class="nt">-s</span> 12 <span class="nt">-in</span> input <span class="nt">-on</span> output <span class="nt">-o</span> built_graph/tiny-yolo-voc.graph 
 </code></pre></div></div>
 
-<p>Now, run this to see the result, with your <code class="highlighter-rouge">Intel Movidius Neural Compute Stick</code> plugged in:</p>
+<p>Now, run this to see the result, with your <code class="language-plaintext highlighter-rouge">Intel Movidius Neural Compute Stick</code> plugged in:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 test_movidius.py <span class="nt">-i</span> video.avi
 </code></pre></div></div>
@@ -172,7 +172,7 @@ mvNCCompile built_graph/tiny-yolo-voc.pb <span class="nt">-s</span> 12 <span cla
 
 <h1 id="edge-example">Edge example</h1>
 
-<p>Grab a coffee and something to do because the procedures are largely the same, but taking a lot longer in an environment like raspberry pi or other device. Do note to use <code class="highlighter-rouge">make api</code> instead of <code class="highlighter-rouge">make</code> when building ncsdk2.</p>
+<p>Grab a coffee and something to do because the procedures are largely the same, but taking a lot longer in an environment like raspberry pi or other device. Do note to use <code class="language-plaintext highlighter-rouge">make api</code> instead of <code class="language-plaintext highlighter-rouge">make</code> when building ncsdk2.</p>
 
 <p>This time, you do not need to train a model, but just import a model like the example above.</p>
 
