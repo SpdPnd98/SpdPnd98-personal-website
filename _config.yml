@@ -95,6 +95,9 @@ topics:
     web_url: https://github.com/nodejs
     image_url: ../images/nodeJS.png
 
+title: modelconverge
+description: "Watch me fuse robotics with AI!"
 url: "https://modelconverge.xyz"
+author: "Bryan Tee"
 
 theme: jekyll-theme-cayman

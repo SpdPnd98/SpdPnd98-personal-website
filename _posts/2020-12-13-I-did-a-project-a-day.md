@@ -24,7 +24,7 @@ Since I was in my winter break, I thought why not do a project a day and challen
 You can see my Journey on Instagram: [https://www.instagram.com/modelconverge/](https://www.instagram.com/modelconverge/)
 
 ## Day 1, 27th November 2020
-I focused on getting my old Jetson Nano tank up and running again. I didn't make a blog post about it as it was too infantile to be called a masterpiece (which I still plan to make it my magnum opus). However, too big of a project will just be a white elephant. So I started to get it running. For some reason, the tank tracks were catching on the battery holder, which I still didn't know what is causing it till this day.
+I focused on getting my old Jetson Nano tank up and running again. I didn't make a blog post about it as it was too infantile to be called a masterpiece (which I still plan to make it my magnum opus). However, too big of a project will just be a white elephant. So I started to get it running. For some reason, the tank tracks were catching on the battery holder, which till this day I still didn't know what is causing it.
 
 ## Day 2, 28th November 2020
 I copied a pan-tilt camera on Thingiverse, and flashed the ESP32-cam demo code. Next, I took the PCA9685 PWM servo driver to control the pan tilt camera through the GPIO pins on the Jetson Nano from a Jupyter Notebook. I met some permisssion problems with the keyboard library so I had to export the notebook as a `.py` file and ran it from the command line instead.
